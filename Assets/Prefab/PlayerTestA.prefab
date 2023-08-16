@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7422287736021841858}
   - component: {fileID: 4293730155309811690}
   - component: {fileID: 567217255620559580}
-  - component: {fileID: 8844313369677747213}
+  - component: {fileID: 2577522946520133960}
   m_Layer: 0
   m_Name: PlayerTestA
   m_TagString: Untagged
@@ -84,7 +84,7 @@ MonoBehaviour:
   InLocalSpace: 0
   Interpolate: 1
   SlerpPosition: 0
---- !u!114 &8844313369677747213
+--- !u!114 &2577522946520133960
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -93,10 +93,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2831760484040758875}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ac2b3ec55f135344bdd226f8fdfa5d6, type: 3}
+  m_Script: {fileID: 11500000, guid: 34f142ff28e0b5646a68eb303515d73b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
+  Player: {fileID: 2831760484040758875}
   colorbutton: {fileID: 0}
 --- !u!1 &4201177923399831611
 GameObject:

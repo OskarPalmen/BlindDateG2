@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 5952034917406119460}
   - component: {fileID: 5330381429629635999}
   - component: {fileID: 6421981694256075864}
-  - component: {fileID: 1365125082017367733}
   m_Layer: 0
   m_Name: PlayerTestB
   m_TagString: Untagged
@@ -84,20 +83,6 @@ MonoBehaviour:
   InLocalSpace: 0
   Interpolate: 1
   SlerpPosition: 0
---- !u!114 &1365125082017367733
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2222961437720909764}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ac2b3ec55f135344bdd226f8fdfa5d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Player: {fileID: 2222961437720909764}
-  colorbutton: {fileID: 0}
 --- !u!1 &9221098248611335256
 GameObject:
   m_ObjectHideFlags: 0
