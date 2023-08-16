@@ -12,20 +12,30 @@ public class TestingNetcodeUI : MonoBehaviour
 
     private void Awake()
     {
-        startHostBtn.onClick.AddListener(() => 
+        startHostBtn.onClick.AddListener(() =>
         {
-            Debug.Log("HOST");
-            NetworkManager.Singleton.StartHost();
-            Hide();
+            ClickHost();
         });
 
 
-        startClientBtn.onClick.AddListener(() => 
+        startClientBtn.onClick.AddListener(() =>
         {
-            Debug.Log("CLIENT");
-            NetworkManager.Singleton.StartClient();
-            Hide();
+            ClickClient();
         });
+    }
+
+    public void ClickClient()
+    {
+        Debug.Log("CLIENT");
+        NetworkManager.Singleton.StartClient();
+        Hide();
+    }
+
+    public void ClickHost()
+    {
+        Debug.Log("HOST");
+        NetworkManager.Singleton.StartHost();
+        Hide();
     }
 
     private void Hide()
