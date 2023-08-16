@@ -1,24 +1,27 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class ClickableImageToggle : MonoBehaviour
 {
     private Image image;
-    private bool isVisible = false;
+    private bool isChecked = false;
+
+    private GameManager gameManager;
 
     private void Start()
     {
         image = GetComponent<Image>();
-        // Initially set the image transparent.
         image.color = new Color(image.color.r, image.color.g, image.color.b, 0f);
+
+        gameManager = FindObjectOfType<GameManager>();
     }
 
     public void ToggleImageVisibility()
     {
-        isVisible = !isVisible;
-        // Toggle image visibility based on the isVisible flag.
-        image.color = new Color(image.color.r, image.color.g, image.color.b, isVisible ? 1f : 0f);
+        isChecked = !isChecked;
+        image.color = new Color(image.color.r, image.color.g, image.color.b, isChecked ? 1f : 0f);
+
+        // Notify the GameManager about the character's toggle state
+        gameManager.CharacterToggled(isChecked);
     }
 }
