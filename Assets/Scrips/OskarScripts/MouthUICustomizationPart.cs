@@ -5,7 +5,9 @@ using UnityEngine.UI;
 
 public class MouthUICustomizationPart : MonoBehaviour
 {
-    public Sprite[] customizationSprites; // Or assign sprite references directly
+    public Sprite[] customizationSprites; // Existing sprites
+    public GameObject playerPrefab; // Reference to the player prefab
+    public string customizationPartName; // Name of the customization part (e.g., "Hat", "Eyes", "Mouth")
 
     private Image imageComponent;
 
@@ -17,10 +19,24 @@ public class MouthUICustomizationPart : MonoBehaviour
 
     public void ApplyRandomCustomization()
     {
-        if (customizationSprites.Length > 0)
+        List<Sprite> allSprites = new List<Sprite>(customizationSprites);
+
+        Transform customizationPart = playerPrefab.transform.Find(customizationPartName);
+
+        if (customizationPart != null)
         {
-            int randomIndex = Random.Range(0, customizationSprites.Length);
-            Sprite randomSprite = customizationSprites[randomIndex];
+            Image[] imageComponents = customizationPart.GetComponentsInChildren<Image>();
+
+            foreach (Image img in imageComponents)
+            {
+                allSprites.Add(img.sprite);
+            }
+        }
+
+        if (allSprites.Count > 0)
+        {
+            int randomIndex = Random.Range(0, allSprites.Count);
+            Sprite randomSprite = allSprites[randomIndex];
 
             imageComponent.sprite = randomSprite;
         }
