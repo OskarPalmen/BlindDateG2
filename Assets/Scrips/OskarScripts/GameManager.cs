@@ -18,31 +18,10 @@ public class GameManager : MonoBehaviour
 
     public void CharacterToggled(bool isChecked)
     {
-        if (isChecked)
-        {
-            // Reduce the count of unchecked characters when a character is clicked
-            uncheckedCharacterCount--;
+        // Update the unchecked character count based on the toggle state
+        uncheckedCharacterCount += isChecked ? -1 : 1;
 
-            // Check if there's only one character left unchecked
-            if (uncheckedCharacterCount == 1)
-            {
-                guessButton.SetActive(true);
-            }
-            else if (uncheckedCharacterCount == 0)
-            {
-                guessButton.SetActive(false);
-            }
-        }
-        else
-        {
-            // Increase the count of unchecked characters when a character is unchecked
-            uncheckedCharacterCount++;
-
-            // Check if there's only one character left unchecked
-            if (uncheckedCharacterCount == 1)
-            {
-                guessButton.SetActive(true);
-            }
-        }
+        // Show or hide the guess button based on the unchecked character count
+        guessButton.SetActive(uncheckedCharacterCount == 1);
     }
 }
