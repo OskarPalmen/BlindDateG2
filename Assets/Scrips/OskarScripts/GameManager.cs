@@ -38,8 +38,11 @@ public class GameManager : MonoBehaviour
             // Increase the count of unchecked characters when a character is unchecked
             uncheckedCharacterCount++;
 
-            // Hide the guess button when unchecking starts
-            guessButton.SetActive(false);
+            // Check if there's only one character left unchecked
+            if (uncheckedCharacterCount == 1)
+            {
+                guessButton.SetActive(true);
+            }
         }
     }
 }
