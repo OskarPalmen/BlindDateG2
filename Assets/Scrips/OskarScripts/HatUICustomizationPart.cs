@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UICustomizationPart : MonoBehaviour
+public class HatUICustomizationPart : MonoBehaviour
 {
     public Sprite[] customizationSprites; // Or assign sprite references directly
 
@@ -26,3 +26,5 @@ public class UICustomizationPart : MonoBehaviour
         }
     }
 }
+
+
