@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 3c525c81276c1fb41abc4b70c451ccfa
+  - enabled: 1
     path: Assets/Scenes/AxelGPMP.unity
     guid: 92f3a8fd1af333c4b885ff10314b4c24
   m_configObjects: {}
