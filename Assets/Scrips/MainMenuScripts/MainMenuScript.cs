@@ -8,7 +8,7 @@ public class MainMenuScript : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene("import text here");
+        SceneManager.LoadScene("AxelGPMPLobby");
     }
 
     public void QuitGame()
