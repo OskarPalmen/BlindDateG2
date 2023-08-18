@@ -10,7 +10,7 @@ public class TestingNetcodeUI : MonoBehaviour
     //[SerializeField] private Button startHostBtn;
     //[SerializeField] private Button startClientBtn;
     //[SerializeField] private Button startServerBtn;
-    [SerializeField] private string gamePlaySceneName = "AxelGPMPGameplay";
+    //[SerializeField] private string gamePlaySceneName = "AxelGPMPGameplay";
 
 
     private void Awake()
@@ -43,7 +43,7 @@ public class TestingNetcodeUI : MonoBehaviour
     {
         Debug.Log("HOST");
         NetworkManager.Singleton.StartHost();
-        NetworkManager.Singleton.SceneManager.LoadScene(gamePlaySceneName, LoadSceneMode.Single);
+        //NetworkManager.Singleton.SceneManager.LoadScene(gamePlaySceneName, LoadSceneMode.Single);
         Hide();
     }
 
@@ -51,7 +51,7 @@ public class TestingNetcodeUI : MonoBehaviour
     {
         Debug.Log("HOST");
         NetworkManager.Singleton.StartServer();
-        NetworkManager.Singleton.SceneManager.LoadScene(gamePlaySceneName, LoadSceneMode.Single);
+        //NetworkManager.Singleton.SceneManager.LoadScene(gamePlaySceneName, LoadSceneMode.Single);
         Hide();
     }
 

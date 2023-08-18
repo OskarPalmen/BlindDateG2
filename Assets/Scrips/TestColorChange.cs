@@ -5,7 +5,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using Unity.Netcode;
 using UnityEditor;
-using UnityEngine.TextCore.Text;
 
 public class TestColorChange : NetworkBehaviour
 {
