@@ -1,18 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Netcode;
 using UnityEngine;
 
 public class MainMenuCleanUp : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        
-    }
+        if(NetworkManager.Singleton != null)
+        {
+            Destroy(NetworkManager.Singleton.gameObject);
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if(TestingGameManager.Instance != null)
+        {
+            Destroy(TestingGameManager.Instance.gameObject);
+        }
     }
 }
