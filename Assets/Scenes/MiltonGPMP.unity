@@ -1591,7 +1591,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -1965,6 +1965,7 @@ MonoBehaviour:
   character: {fileID: 587696960}
   outfitChangers:
   - {fileID: 1788473001}
+  colourTintScript: []
 --- !u!1001 &333948110659640407
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1973,6 +1974,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1846240473}
     m_Modifications:
+    - target: {fileID: 2866280452762440274, guid: 014ae97f0b77d0b4dbcf86d83ecc4e54, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -246
+      objectReference: {fileID: 0}
+    - target: {fileID: 2866280452762440274, guid: 014ae97f0b77d0b4dbcf86d83ecc4e54, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -61
+      objectReference: {fileID: 0}
     - target: {fileID: 3171369883475713052, guid: 014ae97f0b77d0b4dbcf86d83ecc4e54, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2121,14 +2130,14 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: d43854db6c3dbde4ab731bf267687f0a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 62.278008, y: 30.47}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
