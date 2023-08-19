@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4626680612041376712}
   m_Layer: 5
   m_Name: Hat
-  m_TagString: Untagged
+  m_TagString: NPCCharacter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 6070357491935272429}
   m_Layer: 5
   m_Name: Eyes
-  m_TagString: Untagged
+  m_TagString: NPCCharacter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -205,7 +205,7 @@ GameObject:
   - component: {fileID: 7567302484446554175}
   m_Layer: 5
   m_Name: FlipDown
-  m_TagString: Untagged
+  m_TagString: NPCCharacter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -349,7 +349,7 @@ GameObject:
   - component: {fileID: 3690241032426872474}
   m_Layer: 5
   m_Name: UINPC
-  m_TagString: Untagged
+  m_TagString: NPCCharacter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -430,7 +430,7 @@ GameObject:
   - component: {fileID: 5876278801818921195}
   m_Layer: 5
   m_Name: Mouth
-  m_TagString: Untagged
+  m_TagString: NPCCharacter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

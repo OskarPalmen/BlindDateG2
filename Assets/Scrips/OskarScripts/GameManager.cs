@@ -4,24 +4,32 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public GameObject guessButton;
-    private int uncheckedCharacterCount = 0;
 
     private void Start()
     {
         // Find all the ClickableImageToggle components in the scene
         ClickableImageToggle[] characterToggles = FindObjectsOfType<ClickableImageToggle>();
-        uncheckedCharacterCount = characterToggles.Length;
 
         // Hide the guess button initially
         guessButton.SetActive(false);
     }
 
-    public void CharacterToggled(bool isChecked)
+    public void UpdateGuessButton()
     {
-        // Update the unchecked character count based on the toggle state
-        uncheckedCharacterCount += isChecked ? -1 : 1;
+        // Find all the ClickableImageToggle components in the scene
+        ClickableImageToggle[] characterToggles = FindObjectsOfType<ClickableImageToggle>();
 
-        // Show or hide the guess button based on the unchecked character count
-        guessButton.SetActive(uncheckedCharacterCount == 1);
+        // Count the number of untoggled characters
+        int untoggledCharacterCount = 0;
+        foreach (ClickableImageToggle toggle in characterToggles)
+        {
+            if (!toggle.IsChecked)
+            {
+                untoggledCharacterCount++;
+            }
+        }
+
+        // Show the guess button when there's only one untoggled character
+        guessButton.SetActive(untoggledCharacterCount == 1);
     }
 }
