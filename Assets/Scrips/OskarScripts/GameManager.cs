@@ -4,37 +4,52 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public GameObject guessButton;
-
-    private ClickableImageToggle untoggledCharacter; // Reference to the untoggled character
+    private ClickableImageToggle untoggledCharacter;
     public GameObject correctPopUp;
     public GameObject wrongPopUp;
 
+    private bool guessMode = false;
+
     private void Start()
     {
-        // Find all the ClickableImageToggle components in the scene
         ClickableImageToggle[] characterToggles = FindObjectsOfType<ClickableImageToggle>();
-
-        // Hide the guess button initially
         guessButton.SetActive(false);
+    }
+
+    public bool IsGuessMode => guessMode;
+
+    public void ToggleGuessMode()
+    {
+        guessMode = !guessMode;
+        Debug.Log("Guess Mode: " + (guessMode ? "On" : "Off"));
+    }
+
+    public void CharacterClicked(ClickableImageToggle characterToggle)
+    {
+        if (guessMode)
+        {
+            untoggledCharacter = characterToggle;
+            MakeGuess();
+        }
+        else
+        {
+            characterToggle.ToggleImageVisibility();
+            UpdateGuessButton();
+        }
     }
 
     public void UpdateGuessButton()
     {
-        // Find all the ClickableImageToggle components in the scene
         ClickableImageToggle[] characterToggles = FindObjectsOfType<ClickableImageToggle>();
-
-        // Count the number of untoggled characters
         int untoggledCharacterCount = 0;
         foreach (ClickableImageToggle toggle in characterToggles)
         {
             if (!toggle.IsChecked)
             {
                 untoggledCharacterCount++;
-                untoggledCharacter = toggle; // Store the untoggled character reference
+                untoggledCharacter = toggle;
             }
         }
-
-        // Show the guess button when there's only one untoggled character
         guessButton.SetActive(untoggledCharacterCount == 1);
     }
 
