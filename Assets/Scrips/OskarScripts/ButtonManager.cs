@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class ButtonManager : MonoBehaviour
 {
     public Button randomizeButton;
-    public UICustomizationPart[] customizationParts;
+    public HatUICustomizationPart[] customizationParts;
 
     private void Start()
     {
@@ -15,7 +15,7 @@ public class ButtonManager : MonoBehaviour
 
     public void RandomizeAllCustomization()
     {
-        foreach (UICustomizationPart part in customizationParts)
+        foreach (HatUICustomizationPart part in customizationParts)
         {
             part.ApplyRandomCustomization();
         }
