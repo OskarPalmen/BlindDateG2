@@ -1,17 +1,21 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    private Transform canvasTransform;
     public GameObject guessButton;
     private ClickableImageToggle untoggledCharacter;
     public GameObject correctPopUp;
     public GameObject wrongPopUp;
-
+    public GameObject confirmationMenuPrefab;
+    private GameObject currentConfirmationMenu;
     private bool guessMode = false;
 
     private void Start()
     {
+        canvasTransform = FindObjectOfType<Canvas>().transform;
         ClickableImageToggle[] characterToggles = FindObjectsOfType<ClickableImageToggle>();
         guessButton.SetActive(false);
     }
@@ -26,16 +30,42 @@ public class GameManager : MonoBehaviour
 
     public void CharacterClicked(ClickableImageToggle characterToggle)
     {
-        if (guessMode)
+        if (IsGuessMode)
         {
-            untoggledCharacter = characterToggle;
-            MakeGuess();
+            currentConfirmationMenu = Instantiate(confirmationMenuPrefab);
+            currentConfirmationMenu.transform.SetParent(canvasTransform, false);
+            // You might need to set the position and customize the appearance of the menu here.
+
+            // Attach the appropriate callbacks to the Yes and No buttons.
+            Button yesButton = currentConfirmationMenu.transform.Find("YesButton").GetComponent<Button>();
+            Button noButton = currentConfirmationMenu.transform.Find("NoButton").GetComponent<Button>();
+
+            yesButton.onClick.AddListener(() => ConfirmGuess(characterToggle));
+            noButton.onClick.AddListener(CancelGuess);
         }
         else
         {
             characterToggle.ToggleImageVisibility();
             UpdateGuessButton();
         }
+    }
+
+    private void ConfirmGuess(ClickableImageToggle characterToggle)
+    {
+        Destroy(currentConfirmationMenu); // Destroy the confirmation menu
+        currentConfirmationMenu = null;
+
+        untoggledCharacter = characterToggle;
+        MakeGuess();
+        // Exit GuessMode after making a guess
+        ToggleGuessMode();
+    }
+
+    private void CancelGuess()
+    {
+        Destroy(currentConfirmationMenu); // Destroy the confirmation menu
+        currentConfirmationMenu = null;
+        ToggleGuessMode();
     }
 
     public void UpdateGuessButton()

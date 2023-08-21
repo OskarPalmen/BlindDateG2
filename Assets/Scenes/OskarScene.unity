@@ -132,6 +132,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 13576666}
+  - component: {fileID: 13576669}
   - component: {fileID: 13576668}
   - component: {fileID: 13576667}
   m_Layer: 5
@@ -199,6 +200,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 13576665}
   m_CullTransparentMesh: 1
+--- !u!114 &13576669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 13576665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b077a39fde3fc2f49b49e88fd33543e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &62421849
 GameObject:
   m_ObjectHideFlags: 0
@@ -554,8 +567,8 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -683,7 +696,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: GuessMode
+  m_text: Guess
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1143,6 +1156,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1550981102}
+  - component: {fileID: 1550981103}
   - component: {fileID: 1550981101}
   - component: {fileID: 1550981100}
   m_Layer: 5
@@ -1210,6 +1224,18 @@ RectTransform:
   m_AnchoredPosition: {x: 43, y: -517}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1550981103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550981099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b077a39fde3fc2f49b49e88fd33543e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1581592311
 GameObject:
   m_ObjectHideFlags: 0
@@ -1376,6 +1402,7 @@ MonoBehaviour:
   guessButton: {fileID: 1581592311}
   correctPopUp: {fileID: 13576665}
   wrongPopUp: {fileID: 1550981099}
+  confirmationMenuPrefab: {fileID: 5657800666913778255, guid: 453257aa730717f47a99a4730988ebbd, type: 3}
 --- !u!4 &1651198309
 Transform:
   m_ObjectHideFlags: 0
