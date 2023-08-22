@@ -48,7 +48,7 @@ public class CharacterSelectReady : NetworkBehaviour
 
         if (allClientsReady)
         {
-            NetworkManager.Singleton.SceneManager.LoadScene("AxelGPMPGameplay", LoadSceneMode.Single);
+            NetworkManager.Singleton.SceneManager.LoadScene("OskarScene", LoadSceneMode.Single);
         }
     }
 

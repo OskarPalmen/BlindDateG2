@@ -16,8 +16,8 @@ public class CharacterCreationMenu1 : MonoBehaviour
     //    }
     //}
 
-    public void Submit()
-    {
-        PrefabUtility.SaveAsPrefabAsset(character, "Assets/Prefab/PlayerTestA.prefab");
-    }
+    //public void Submit()
+    //{
+    //    PrefabUtility.SaveAsPrefabAsset(character, "Assets/Prefab/PlayerTestA.prefab");
+    //}
 }

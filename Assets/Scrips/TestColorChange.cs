@@ -52,9 +52,9 @@ public class TestColorChange : NetworkBehaviour
         randomNumber.Value = Random.Range(0, 100);
     }
 
-    public void Submit()
-    {
-        PrefabUtility.SaveAsPrefabAsset(Player, "Assets/Prefab/PlayerTestA.prefab");
-    }
+    //public void Submit()
+    //{
+    //    PrefabUtility.SaveAsPrefabAsset(Player, "Assets/Prefab/PlayerTestA.prefab");
+    //}
 
 }

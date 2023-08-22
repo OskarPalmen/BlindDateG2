@@ -21,8 +21,8 @@ public class NewBehaviourScript : MonoBehaviour
         }
     }
 
-    public void Submit()
-    {
-        PrefabUtility.SaveAsPrefabAsset(character, "Assets/Prefab/Player.prefab");
-    }
+    //public void Submit()
+    //{
+    //    PrefabUtility.SaveAsPrefabAsset(character, "Assets/Prefab/Player.prefab");
+    //}
 }

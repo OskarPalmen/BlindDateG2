@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AxelGPMPGameplay.unity
     guid: 04e6d018eab725c44b7242bc30577afd
+  - enabled: 1
+    path: Assets/Scenes/OskarScene.unity
+    guid: 3e2d1a84adaee6d4c8ef7d1334b76162
   m_configObjects: {}

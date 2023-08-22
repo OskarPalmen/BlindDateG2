@@ -2388,7 +2388,7 @@ MonoBehaviour:
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
-  m_ScreenMatchMode: 0
+  m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
@@ -5557,6 +5557,10 @@ PrefabInstance:
     - target: {fileID: 2189590453894057377, guid: 946eb74596070e749a6fcf664f87de97, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2760617379237773824, guid: 946eb74596070e749a6fcf664f87de97, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3882488547575302049, guid: 946eb74596070e749a6fcf664f87de97, type: 3}
       propertyPath: GlobalObjectIdHash
