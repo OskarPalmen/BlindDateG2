@@ -1,40 +1,85 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    private Transform canvasTransform;
     public GameObject guessButton;
-
-    private ClickableImageToggle untoggledCharacter; // Reference to the untoggled character
+    private ClickableImageToggle untoggledCharacter;
     public GameObject correctPopUp;
     public GameObject wrongPopUp;
+    public GameObject confirmationMenuPrefab;
+    private GameObject currentConfirmationMenu;
+    private bool guessMode = false;
 
     private void Start()
     {
-        // Find all the ClickableImageToggle components in the scene
+        canvasTransform = FindObjectOfType<Canvas>().transform;
         ClickableImageToggle[] characterToggles = FindObjectsOfType<ClickableImageToggle>();
-
-        // Hide the guess button initially
         guessButton.SetActive(false);
+    }
+
+    public bool IsGuessMode => guessMode;
+
+    public void ToggleGuessMode()
+    {
+        guessMode = !guessMode;
+        Debug.Log("Guess Mode: " + (guessMode ? "On" : "Off"));
+    }
+
+    public void CharacterClicked(ClickableImageToggle characterToggle)
+    {
+        if (IsGuessMode)
+        {
+            currentConfirmationMenu = Instantiate(confirmationMenuPrefab);
+            currentConfirmationMenu.transform.SetParent(canvasTransform, false);
+            // You might need to set the position and customize the appearance of the menu here.
+
+            // Attach the appropriate callbacks to the Yes and No buttons.
+            Button yesButton = currentConfirmationMenu.transform.Find("YesButton").GetComponent<Button>();
+            Button noButton = currentConfirmationMenu.transform.Find("NoButton").GetComponent<Button>();
+
+            yesButton.onClick.AddListener(() => ConfirmGuess(characterToggle));
+            noButton.onClick.AddListener(CancelGuess);
+        }
+        else
+        {
+            characterToggle.ToggleImageVisibility();
+            UpdateGuessButton();
+        }
+    }
+
+    private void ConfirmGuess(ClickableImageToggle characterToggle)
+    {
+        Destroy(currentConfirmationMenu); // Destroy the confirmation menu
+        currentConfirmationMenu = null;
+
+        untoggledCharacter = characterToggle;
+        MakeGuess();
+        // Exit GuessMode after making a guess
+        ToggleGuessMode();
+    }
+
+    private void CancelGuess()
+    {
+        Destroy(currentConfirmationMenu); // Destroy the confirmation menu
+        currentConfirmationMenu = null;
+        ToggleGuessMode();
     }
 
     public void UpdateGuessButton()
     {
-        // Find all the ClickableImageToggle components in the scene
         ClickableImageToggle[] characterToggles = FindObjectsOfType<ClickableImageToggle>();
-
-        // Count the number of untoggled characters
         int untoggledCharacterCount = 0;
         foreach (ClickableImageToggle toggle in characterToggles)
         {
             if (!toggle.IsChecked)
             {
                 untoggledCharacterCount++;
-                untoggledCharacter = toggle; // Store the untoggled character reference
+                untoggledCharacter = toggle;
             }
         }
-
-        // Show the guess button when there's only one untoggled character
         guessButton.SetActive(untoggledCharacterCount == 1);
     }
 

@@ -6,7 +6,7 @@ public class ClickableImageToggle : MonoBehaviour
     private Image image;
     private bool isChecked = false;
 
-    public bool IsChecked => isChecked; // Add this property
+    public bool IsChecked => isChecked;
 
     private GameManager gameManager;
 
@@ -18,12 +18,23 @@ public class ClickableImageToggle : MonoBehaviour
         gameManager = FindObjectOfType<GameManager>();
     }
 
+    public void OnCharacterClicked()
+    {
+        if (gameManager.IsGuessMode)
+        {
+            gameManager.CharacterClicked(this);
+        }
+        else
+        {
+            ToggleImageVisibility();
+        }
+    }
+
     public void ToggleImageVisibility()
     {
         isChecked = !isChecked;
         image.color = new Color(image.color.r, image.color.g, image.color.b, isChecked ? 1f : 0f);
 
-        // Notify the GameManager to update the guess button
         gameManager.UpdateGuessButton();
     }
 }
