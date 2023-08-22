@@ -1,38 +1,40 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ColorTintScript : MonoBehaviour
 {
-    [Header("Color To Change")]
-    public SpriteRenderer coloredBodyPart;
+    public Image bodyColor;
 
-    [Header("Colors To Cycle Through")]
-    public List<Color> tintColors = new List<Color>();
+    public List<Color> colors = new List<Color>();
 
-    private int currentOption = 0;
+    public int whatColor = 1;
 
-    public void NextColor()
+    private void Awake ()
     {
-        currentOption++;
-        if(currentOption >= tintColors.Count)
-        {
-            currentOption = 0; // Reset if cycled through the entire list
-        }
-        coloredBodyPart.color = tintColors[currentOption];
+        bodyColor.GetComponent<Image>();
     }
-    public void PreviousColor()
+
+    void Update ()
     {
-        currentOption--;
-        if (currentOption <= 0)
+        for (int i = 0; i < colors.Count; i++)
         {
-            currentOption = tintColors.Count - 1; // Reset if cycled through the entire list
+            if (i == whatColor)
+            {
+                bodyColor.color = colors[i];
+            }
         }
-        coloredBodyPart.color = tintColors[currentOption];
     }
+
+    public void ColorChanger (int index)
+    {
+        whatColor = index;
+    }
+
     public void ColorRandomize()
     {
-        currentOption = Random.Range(0, tintColors.Count - 1);
-        coloredBodyPart.color = tintColors[currentOption];
+        whatColor = Random.Range(0, colors.Count - 1);
+        bodyColor.color = colors[whatColor];
     }
 }
