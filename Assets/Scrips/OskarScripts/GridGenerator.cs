@@ -12,12 +12,10 @@ public class GridGenerator : MonoBehaviour
     public float horizontalSpacing = 100.0f; // Spacing between NPCs horizontally
     public float verticalSpacing = 100.0f;   // Spacing between NPCs vertically
 
-    private Canvas canvas;
+    public RectTransform panel; // Reference to the Panel component
 
     void Start()
     {
-        canvas = GetComponent<Canvas>(); // Reference to the Canvas component
-
         // Calculate the starting position based on the grid dimensions
         float startX = -(horizontalSpacing * (columns - 1)) / 2;
         float startY = -(verticalSpacing * (rows - 1)) / 2;
@@ -37,17 +35,17 @@ public class GridGenerator : MonoBehaviour
                     prefabToSpawn = enemyNpcPrefab;
                 }
 
-                // Calculate the position for the new NPC in canvas space
-                Vector3 canvasPosition = new Vector3(startX + col * horizontalSpacing, startY + row * verticalSpacing, 0);
-
-                // Convert the canvas position to world space
-                Vector3 worldPosition = canvas.transform.TransformPoint(canvasPosition);
+                // Calculate the position for the new NPC in panel space
+                Vector3 panelPosition = new Vector3(startX + col * horizontalSpacing, startY + row * verticalSpacing, 0);
 
                 // Instantiate the NPC prefab at the calculated position
-                GameObject newNPC = Instantiate(prefabToSpawn, worldPosition, Quaternion.identity);
+                GameObject newNPC = Instantiate(prefabToSpawn, panelPosition, Quaternion.identity);
 
-                // Set the Canvas as the parent of the newly instantiated NPC
-                newNPC.transform.SetParent(canvas.transform);
+                // Set the Panel as the parent of the newly instantiated NPC
+                newNPC.transform.SetParent(panel.transform, false); // Maintain local scale
+
+                // If you want to maintain the world scale, use the following line:
+                // newNPC.transform.SetParent(panel.transform);
             }
         }
     }
