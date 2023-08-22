@@ -8,11 +8,24 @@ public class RandomizeAllButton : MonoBehaviour
 {
     public void OnRandomizeButtonClicked()
     {
-        UICustomizationPart[] customizationParts = FindObjectsOfType<UICustomizationPart>();
+        HatUICustomizationPart[] customizationPartsHat = FindObjectsOfType<HatUICustomizationPart>();
+        EyesUICustomizationPart[] customizationPartsEyes = FindObjectsOfType<EyesUICustomizationPart>();
+        MouthUICustomizationPart[] customizationPartsMouth = FindObjectsOfType<MouthUICustomizationPart>();
 
-        foreach (UICustomizationPart part in customizationParts)
+        foreach (HatUICustomizationPart part in customizationPartsHat)
         {
             part.ApplyRandomCustomization();
         }
+
+        foreach (EyesUICustomizationPart part in customizationPartsEyes)
+        {
+            part.ApplyRandomCustomization();
+        }
+
+        foreach (MouthUICustomizationPart part in customizationPartsMouth)
+        {
+            part.ApplyRandomCustomization();
+        }
+
     }
 }
