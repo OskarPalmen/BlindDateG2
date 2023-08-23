@@ -53,15 +53,15 @@ public class CharacterSelectReady : NetworkBehaviour
     }
 
     [ClientRpc]
-    private void SetplayerReadyClientRpc(ulong clintId)
+    private void SetplayerReadyClientRpc(ulong clientId)
     {
-        playerReadyDictionary[clintId] = true;
+        playerReadyDictionary[clientId] = true;
 
         OnReadyChanged?.Invoke(this, EventArgs.Empty);
     }
 
-    public bool IsPlayerready(ulong clintId)
+    public bool IsPlayerReady(ulong clientID)
     {
-        return playerReadyDictionary[clintId];
+        return playerReadyDictionary.ContainsKey(clientID) && playerReadyDictionary[clientID];
     }
 }

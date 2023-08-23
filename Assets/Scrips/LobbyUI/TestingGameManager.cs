@@ -13,6 +13,11 @@ public class TestingGameManager : NetworkBehaviour
     //public event EventHandler OnLocalPlayerReadyChanged;
     public event EventHandler OnPlayerDataNetworkListChanged;
 
+
+
+    //change this to playercreator
+    [SerializeField] private List<Color> playerColorList;
+
     //private bool isLocalPlayerReady;
     //private Dictionary<ulong, bool> playerReadyDictionary;
     private NetworkList<PlayerData> playerDataNetworkList;
@@ -86,5 +91,17 @@ public class TestingGameManager : NetworkBehaviour
     public bool IsPlayerIndexConnected(int playerIndex)
     {
         return playerIndex < playerDataNetworkList.Count;
+    }
+
+    public PlayerData GetPlayerDataFromIndex(int playerIndex)
+    {
+        return playerDataNetworkList[playerIndex];
+    }
+
+
+    //change this to playercreator
+    public Color GetPlayerColor(int colorId)
+    {
+        return playerColorList[colorId];
     }
 }

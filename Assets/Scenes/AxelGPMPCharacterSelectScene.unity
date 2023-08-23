@@ -4128,6 +4128,10 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 1864916738
       objectReference: {fileID: 0}
+    - target: {fileID: 1578883229907044264, guid: 946eb74596070e749a6fcf664f87de97, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 299.99997
+      objectReference: {fileID: 0}
     - target: {fileID: 1697788493078153370, guid: 946eb74596070e749a6fcf664f87de97, type: 3}
       propertyPath: m_Name
       value: Player_1
@@ -5469,6 +5473,14 @@ PrefabInstance:
     - target: {fileID: 1226388062090074851, guid: 946eb74596070e749a6fcf664f87de97, type: 3}
       propertyPath: GlobalObjectIdHash
       value: 1612324016
+      objectReference: {fileID: 0}
+    - target: {fileID: 1578883229907044264, guid: 946eb74596070e749a6fcf664f87de97, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -300
+      objectReference: {fileID: 0}
+    - target: {fileID: 1578883229907044264, guid: 946eb74596070e749a6fcf664f87de97, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 175
       objectReference: {fileID: 0}
     - target: {fileID: 1697788493078153370, guid: 946eb74596070e749a6fcf664f87de97, type: 3}
       propertyPath: m_Name

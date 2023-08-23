@@ -5,6 +5,8 @@ using UnityEngine;
 public class CharacterSelectPlayer : MonoBehaviour
 {
     [SerializeField] int playerIndex;
+    [SerializeField] GameObject readyGameObject;
+    [SerializeField] PlayerVisual playerVisual;
     private void Start()
     {
         TestingGameManager.Instance.OnPlayerDataNetworkListChanged += GameManager_OnPlayerDataNetworkListChanged;
@@ -27,6 +29,13 @@ public class CharacterSelectPlayer : MonoBehaviour
         if(TestingGameManager.Instance.IsPlayerIndexConnected(playerIndex)) 
         {
             Show();
+            PlayerData playerData = TestingGameManager.Instance.GetPlayerDataFromIndex(playerIndex);
+            readyGameObject.SetActive(CharacterSelectReady.Instance.IsPlayerReady(playerData.clientId));
+
+            //changes to creator
+            playerVisual.SetPlayerColor(TestingGameManager.Instance.GetPlayerColor(playerIndex));
+
+            //Set the playervisual from instace testinggmaemanagers thrue index
         }
         else
         {
