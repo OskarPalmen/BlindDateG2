@@ -11,7 +11,10 @@ public class GameManager : MonoBehaviour
     public GameObject wrongPopUp;
     public GameObject confirmationMenuPrefab;
     private GameObject currentConfirmationMenu;
+    public GameObject askButton;
     private bool guessMode = false;
+    private int currentPlayerTurn = 0; // 0 represents Player 1, 1 represents Player 2
+
 
     private void Start()
     {
@@ -21,12 +24,23 @@ public class GameManager : MonoBehaviour
     }
 
     public bool IsGuessMode => guessMode;
+    public int CurrentPlayerTurn => currentPlayerTurn;
 
     public void ToggleGuessMode()
     {
         guessMode = !guessMode;
         Debug.Log("Guess Mode: " + (guessMode ? "On" : "Off"));
     }
+
+
+    public void EndTurn()
+    {
+        currentPlayerTurn = (currentPlayerTurn + 1) % 2; // Switch turns between 0 and 1
+        Debug.Log("Turn ended for Player " + (currentPlayerTurn + 1));
+        // Enable or disable the AskButton based on the current player's turn
+        //askButton.SetActive(currentPlayerTurn == NetworkManager.LocalPlayerId);
+    }
+
 
     public void CharacterClicked(ClickableImageToggle characterToggle)
     {
@@ -59,6 +73,7 @@ public class GameManager : MonoBehaviour
         MakeGuess();
         // Exit GuessMode after making a guess
         ToggleGuessMode();
+        EndTurn();
     }
 
     private void CancelGuess()
@@ -67,6 +82,14 @@ public class GameManager : MonoBehaviour
         currentConfirmationMenu = null;
         ToggleGuessMode();
     }
+
+
+    // Add a method to check if it's the current player's turn
+    //public bool IsCurrentPlayerTurn()
+    //{
+    //    return currentPlayerTurn == NetworkManager.LocalPlayerId; // Replace with actual logic for identifying local player
+    //}
+
 
     public void UpdateGuessButton()
     {
