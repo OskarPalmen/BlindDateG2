@@ -409,12 +409,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1318378666767700127}
   - {fileID: 2866280452762440274}
   - {fileID: 2935896897494996554}
   - {fileID: 8000817617048152077}
   - {fileID: 747385899149484945}
   - {fileID: 2772164759966954980}
-  - {fileID: 1318378666767700127}
   m_Father: {fileID: 0}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -435,14 +435,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ad5b5408563b154aa03013bdaf825ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hatImage: {fileID: 0}
-  hairImage: {fileID: 0}
-  eyeImage: {fileID: 0}
-  noseImage: {fileID: 0}
-  mouthImage: {fileID: 0}
-  bodyImage: {fileID: 0}
-  options: []
-  colors: []
 --- !u!1 &8539628921503513750
 GameObject:
   m_ObjectHideFlags: 0
