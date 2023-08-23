@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class NewBehaviourScript : MonoBehaviour
 {
     public GameObject character;
+    [SerializeField] private string nextScene;
     public List<OutfitChanger> outfitChangers = new List<OutfitChanger>();
     public List<ColorTintScript> colourTintScript = new List<ColorTintScript>();
     public void RandomizeCharacter()
@@ -21,8 +22,8 @@ public class NewBehaviourScript : MonoBehaviour
         }
     }
 
-    //public void Submit()
-    //{
-    //    PrefabUtility.SaveAsPrefabAsset(character, "Assets/Prefab/Player.prefab");
-    //}
+    public void Submit()
+    {
+        SceneManager.LoadScene(nextScene);
+    }
 }

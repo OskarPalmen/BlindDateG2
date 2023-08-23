@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public GameObject wrongPopUp;
     public GameObject confirmationMenuPrefab;
     private GameObject currentConfirmationMenu;
+    public GameObject askButton;
     private bool guessMode = false;
     private int currentPlayerTurn = 0; // 0 represents Player 1, 1 represents Player 2
 
@@ -36,6 +37,8 @@ public class GameManager : MonoBehaviour
     {
         currentPlayerTurn = (currentPlayerTurn + 1) % 2; // Switch turns between 0 and 1
         Debug.Log("Turn ended for Player " + (currentPlayerTurn + 1));
+        // Enable or disable the AskButton based on the current player's turn
+        //askButton.SetActive(currentPlayerTurn == NetworkManager.LocalPlayerId);
     }
 
 
