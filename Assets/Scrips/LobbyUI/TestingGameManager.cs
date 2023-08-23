@@ -92,11 +92,29 @@ public class TestingGameManager : NetworkBehaviour
     {
         return playerIndex < playerDataNetworkList.Count;
     }
+    public PlayerData GetPlayerDataFromClientId(ulong clientId)
+    {
+        foreach (PlayerData playerData in playerDataNetworkList)
+        {
+            if (playerData.clientId == clientId)
+            {
+                return playerData;
+            }
+        }
+        return default;
+    }
+
+    public PlayerData GetPlayerData()
+    {
+        return GetPlayerDataFromClientId(NetworkManager.Singleton.LocalClientId);
+    }
 
     public PlayerData GetPlayerDataFromIndex(int playerIndex)
     {
         return playerDataNetworkList[playerIndex];
     }
+
+
 
 
     //change this to playercreator
