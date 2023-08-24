@@ -16,7 +16,7 @@ public class TestingGameManager : NetworkBehaviour
 
 
     //change this to playercreator
-    [SerializeField] private List<Color> playerColorList;
+    //[SerializeField] private List<Color> playerColorList;
 
     //private bool isLocalPlayerReady;
     //private Dictionary<ulong, bool> playerReadyDictionary;
@@ -62,6 +62,7 @@ public class TestingGameManager : NetworkBehaviour
         playerDataNetworkList.Add(new PlayerData
         {
             clientId = clientId,
+            //colorId = GetFirstUnusedColorId(),
         });
     }
        
@@ -104,6 +105,19 @@ public class TestingGameManager : NetworkBehaviour
         return default;
     }
 
+
+    public int GetPlayerDataIndexFromClientId(ulong clientId)
+    {
+        for(int i = 0; i < playerDataNetworkList.Count; i++)        
+        {
+            if (playerDataNetworkList[i].clientId == clientId)
+            {
+                return i;
+            }
+        }
+        return -1;
+    }
+
     public PlayerData GetPlayerData()
     {
         return GetPlayerDataFromClientId(NetworkManager.Singleton.LocalClientId);
@@ -116,10 +130,56 @@ public class TestingGameManager : NetworkBehaviour
 
 
 
-
+    
     //change this to playercreator
-    public Color GetPlayerColor(int colorId)
-    {
-        return playerColorList[colorId];
-    }
+    //public Color GetPlayerColor(int colorId)
+    //{
+    //    return playerColorList[colorId];
+    //}
+    
+
+    //public void ChangePlayerColor(int colorId)
+    //{
+    //    ChangePlayerColorServerRpc(colorId);
+    //}
+
+    //[ServerRpc(RequireOwnership = false)]
+    //private void ChangePlayerColorServerRpc(int colorId, ServerRpcParams serverRpcParams = default)
+    //{
+    //    if(!IsColorAvailable(colorId))
+    //    {
+    //        return;
+    //    }
+    //    int playerDataindex = GetPlayerDataIndexFromClientId(serverRpcParams.Receive.SenderClientId);
+
+    //    ////grabbing
+    //    //PlayerData playerData = playerDataNetworkList[playerDataindex];
+    //    ////modifing
+    //    //playerData.colorId = colorId;
+    //    ////add it
+    //    //playerDataNetworkList[playerDataindex] = playerData;
+    //}
+
+    //private bool IsColorAvailable (int colorId)
+    //{
+    //    foreach (PlayerData playerData in playerDataNetworkList)
+    //    {
+    //        if (playerData.colorId == colorId)
+    //            return false;
+    //    }
+    //    return true;
+    //}
+
+    //private int GetFirstUnusedColorId()
+    //{
+    //    for(int i = 0; i < playerColorList.Count; i++)
+    //    {
+    //        if(IsColorAvailable(i))
+    //        {
+    //            return i;
+    //        }
+    //    }
+    //    //can add to see if player have same color/skins
+    //    return -1;
+    //}
 }
