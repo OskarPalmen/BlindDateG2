@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     private GameObject currentConfirmationMenu;
     public GameObject askButton;
     public GameObject YourTurn;
+    public GameObject MatchTurn;
     private bool guessMode = false;
     private int currentPlayerTurn = 0; // 0 represents Player 1, 1 represents Player 2
 
