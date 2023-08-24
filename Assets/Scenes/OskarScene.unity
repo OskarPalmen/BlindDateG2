@@ -2102,8 +2102,8 @@ MonoBehaviour:
   enemyNpcPrefab: {fileID: 6934113524630797456, guid: 0927c85ad744f6c4aa1179530ba0ba69, type: 3}
   rows: 4
   columns: 5
-  horizontalSpacing: 210
-  verticalSpacing: 210
+  horizontalSpacing: 240
+  verticalSpacing: 240
   panel: {fileID: 1347051779}
 --- !u!1 &1389840187
 GameObject:
