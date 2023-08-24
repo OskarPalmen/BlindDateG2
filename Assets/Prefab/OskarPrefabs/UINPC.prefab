@@ -60,9 +60,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   customizationSprites:
-  - {fileID: 21300000, guid: fd7ee94f8949f7e4cb6e46d3d72b1596, type: 3}
-  - {fileID: 21300000, guid: e98c7ac82484a2d4cb3df485dcaeb6f4, type: 3}
-  - {fileID: 21300000, guid: 008cfa6d2b21aaf45915dda09c4a526c, type: 3}
+  - {fileID: 21300000, guid: 0988b31e7a61e1444add8e4620fc7d01, type: 3}
+  - {fileID: 21300000, guid: 46fca2f7a3ea6d745852460448b92098, type: 3}
+  - {fileID: 21300000, guid: 8954480082419a143bc24d0d9313b7b3, type: 3}
+  - {fileID: 21300000, guid: b84565ff9e55a5f48b5f221525568f56, type: 3}
+  - {fileID: 21300000, guid: 6feec2a87aad12c458768fb539f843e0, type: 3}
   playerPrefab: {fileID: 6934113524630797456, guid: 0927c85ad744f6c4aa1179530ba0ba69, type: 3}
   customizationPartName: Hair
 --- !u!114 &4626680612041376712
