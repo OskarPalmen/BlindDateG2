@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public GameObject confirmationMenuPrefab;
     private GameObject currentConfirmationMenu;
     public GameObject askButton;
+    public GameObject YourTurn;
     private bool guessMode = false;
     private int currentPlayerTurn = 0; // 0 represents Player 1, 1 represents Player 2
 
@@ -20,6 +21,9 @@ public class GameManager : MonoBehaviour
     {
         canvasTransform = FindObjectOfType<Canvas>().transform;
         ClickableImageToggle[] characterToggles = FindObjectsOfType<ClickableImageToggle>();
+
+        // Set the initial state of the YourTurn GameObject
+        YourTurn.SetActive(currentPlayerTurn == 0); // Assuming Player 1 starts
         guessButton.SetActive(false);
     }
 
@@ -39,6 +43,9 @@ public class GameManager : MonoBehaviour
         Debug.Log("Turn ended for Player " + (currentPlayerTurn + 1));
         // Enable or disable the AskButton based on the current player's turn
         //askButton.SetActive(currentPlayerTurn == NetworkManager.LocalPlayerId);
+
+        // Toggle the visibility of the YourTurn GameObject
+        YourTurn.SetActive(currentPlayerTurn == 0); // Toggle based on Player 1's turn
     }
 
 
