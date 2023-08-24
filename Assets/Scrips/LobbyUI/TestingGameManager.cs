@@ -79,11 +79,11 @@ public class TestingGameManager : NetworkBehaviour
     {
         if (NetworkManager.Singleton.ConnectedClientsIds.Count >= 2)
         {
-            foreach (ulong clinetId in NetworkManager.Singleton.ConnectedClientsIds)
+            foreach (ulong clientId in NetworkManager.Singleton.ConnectedClientsIds)
             {
                 //spawning in the player prefab
                 GameObject playerTransform = Instantiate(playerPrefab);
-                playerTransform.GetComponent<NetworkObject>().SpawnAsPlayerObject(clinetId, true);
+                playerTransform.GetComponent<NetworkObject>().SpawnAsPlayerObject(clientId, true);
             }
         }
         

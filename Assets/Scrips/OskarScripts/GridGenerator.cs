@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Netcode;
+using UnityEditor.PackageManager;
 using UnityEngine;
 
-public class GridGenerator : MonoBehaviour
+public class GridGenerator : NetworkBehaviour
 {
     public GameObject npcPrefab;         // Prefab for the normal NPCs
     public GameObject enemyNpcPrefab;    // Prefab for the enemy NPC
@@ -32,7 +34,17 @@ public class GridGenerator : MonoBehaviour
                 // Check if this is the location for the enemy NPC
                 if (row == enemyRow && col == enemyColumn)
                 {
-                    prefabToSpawn = enemyNpcPrefab;
+                    //prefabToSpawn = enemyNpcPrefab;
+                    if (NetworkManager.Singleton.ConnectedClientsIds.Count >= 2)
+                    {
+                        foreach (ulong clientId in NetworkManager.Singleton.ConnectedClientsIds)
+                        {
+                            //spawning in the player prefab
+                            GameObject playerTransform = Instantiate(enemyNpcPrefab);
+                            playerTransform.GetComponent<NetworkObject>().SpawnAsPlayerObject(clientId, true);
+                        }
+                    }
+
                 }
 
                 // Calculate the position for the new NPC in panel space
