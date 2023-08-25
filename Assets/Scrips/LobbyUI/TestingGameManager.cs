@@ -19,7 +19,7 @@ public class TestingGameManager : NetworkBehaviour
     //[SerializeField] private List<Color> playerColorList;
 
     //private bool isLocalPlayerReady;
-    //private Dictionary<ulong, bool> playerReadyDictionary;
+    private Dictionary<ulong, bool> playerReadyDictionary;
     private NetworkList<PlayerData> playerDataNetworkList;
 
 

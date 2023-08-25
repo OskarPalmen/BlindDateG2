@@ -18,6 +18,7 @@ public class GridGenerator : NetworkBehaviour
 
     void Start()
     {
+
         // Calculate the starting position based on the grid dimensions
         float startX = -(horizontalSpacing * (columns - 1)) / 2;
         float startY = -(verticalSpacing * (rows - 1)) / 2;
@@ -34,15 +35,11 @@ public class GridGenerator : NetworkBehaviour
                 // Check if this is the location for the enemy NPC
                 if (row == enemyRow && col == enemyColumn)
                 {
+
                     //prefabToSpawn = enemyNpcPrefab;
                     if (NetworkManager.Singleton.ConnectedClientsIds.Count >= 2)
                     {
-                        foreach (ulong clientId in NetworkManager.Singleton.ConnectedClientsIds)
-                        {
-                            //spawning in the player prefab
-                            enemyNpcPrefab = Instantiate(enemyNpcPrefab);
-                            enemyNpcPrefab.GetComponent<NetworkObject>().SpawnAsPlayerObject(clientId, true);
-                        }
+                        addcharatterServerRpc();
                     }
 
                 }
@@ -60,5 +57,20 @@ public class GridGenerator : NetworkBehaviour
                 // newNPC.transform.SetParent(panel.transform);
             }
         }
+    }
+
+    [ServerRpc(RequireOwnership =false)]
+    private void addcharatterServerRpc()
+    {
+        foreach (ulong clientId in NetworkManager.Singleton.ConnectedClientsIds)
+        {
+            //spawning in the player prefab
+            //enemyNpcPrefab = Instantiate(enemyNpcPrefab);
+            //enemyNpcPrefab.GetComponent<NetworkObject>().SpawnAsPlayerObject(clientId, true);
+            //Instantiate(enemyNpcPrefab).GetComponent<NetworkObject>().SpawnAsPlayerObject(clientId, true);
+
+
+        }
+
     }
 }
