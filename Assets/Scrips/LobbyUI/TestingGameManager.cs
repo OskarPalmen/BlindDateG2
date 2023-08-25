@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class TestingGameManager : NetworkBehaviour
 {
@@ -12,6 +13,8 @@ public class TestingGameManager : NetworkBehaviour
 
     //public event EventHandler OnLocalPlayerReadyChanged;
     public event EventHandler OnPlayerDataNetworkListChanged;
+
+    public RectTransform panel;
 
 
 

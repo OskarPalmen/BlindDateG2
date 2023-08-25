@@ -6,6 +6,7 @@ TagManager:
   tags:
   - NPCCharacter
   - PlayerCharacter
+  - Canvas
   layers:
   - Default
   - TransparentFX

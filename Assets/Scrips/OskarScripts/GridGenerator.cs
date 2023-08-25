@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class GridGenerator : NetworkBehaviour
 {
+    public static GridGenerator gridGenerator { get; private set; }
+    
     public GameObject npcPrefab;         // Prefab for the normal NPCs
     public GameObject enemyNpcPrefab;    // Prefab for the enemy NPC
     public int rows = 3;                 // Number of rows in the grid
@@ -35,12 +37,16 @@ public class GridGenerator : NetworkBehaviour
                 // Check if this is the location for the enemy NPC
                 if (row == enemyRow && col == enemyColumn)
                 {
+                    
 
                     //prefabToSpawn = enemyNpcPrefab;
                     if (NetworkManager.Singleton.ConnectedClientsIds.Count >= 2)
                     {
-                        addcharatterServerRpc();
+                        //prefabToSpawn = enemyNpcPrefab;
+                        addcharatterServerRpc132();
+
                     }
+
 
                 }
 
@@ -59,15 +65,18 @@ public class GridGenerator : NetworkBehaviour
         }
     }
 
-    [ServerRpc(RequireOwnership =false)]
-    private void addcharatterServerRpc()
+    //[ServerRpc(RequireOwnership = false)]
+    private void addcharatterServerRpc132()
     {
+
         foreach (ulong clientId in NetworkManager.Singleton.ConnectedClientsIds)
         {
             //spawning in the player prefab
-            //enemyNpcPrefab = Instantiate(enemyNpcPrefab);
+            //enemyNpcPrefab = Instantiate(enemyNpcPrefab);            
             //enemyNpcPrefab.GetComponent<NetworkObject>().SpawnAsPlayerObject(clientId, true);
+            enemyNpcPrefab.GetComponent<NetworkObject>().SpawnAsPlayerObject(clientId, true);
             //Instantiate(enemyNpcPrefab).GetComponent<NetworkObject>().SpawnAsPlayerObject(clientId, true);
+
 
 
         }

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7753152510260934434}
   m_Layer: 5
   m_Name: CharacterSelectPlayer
-  m_TagString: Untagged
+  m_TagString: PlayerCharacter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -217,6 +217,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2189590453894057377}
     m_Modifications:
+    - target: {fileID: -1986982851063515398, guid: 0927c85ad744f6c4aa1179530ba0ba69, type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 951099334
+      objectReference: {fileID: 0}
     - target: {fileID: 3171369883475713052, guid: 0927c85ad744f6c4aa1179530ba0ba69, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
