@@ -760,6 +760,7 @@ GameObject:
   - component: {fileID: 7081496897095783392}
   - component: {fileID: 6595992133045374905}
   - component: {fileID: 97002264391416674}
+  - component: {fileID: -1986982851063515398}
   m_Layer: 5
   m_Name: PlayerVisual
   m_TagString: PlayerCharacter
@@ -828,6 +829,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d622538f5d7c1340b4ec0ee8eebf93f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-1986982851063515398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6934113524630797456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GlobalObjectIdHash: 951099334
+  AlwaysReplicateAsRoot: 0
+  SynchronizeTransform: 1
+  ActiveSceneSynchronization: 0
+  SceneMigrationSynchronization: 1
+  DontDestroyWithOwner: 0
+  AutoObjectParentSync: 1
 --- !u!1 &8539628921503513750
 GameObject:
   m_ObjectHideFlags: 0

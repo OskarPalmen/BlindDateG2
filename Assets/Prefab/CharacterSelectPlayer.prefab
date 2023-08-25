@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2189590453894057377}
   - component: {fileID: 6495480570872765014}
-  - component: {fileID: 8975663328422813341}
+  - component: {fileID: 7753152510260934434}
   m_Layer: 5
   m_Name: CharacterSelectPlayer
   m_TagString: Untagged
@@ -55,7 +55,7 @@ MonoBehaviour:
   playerIndex: 0
   readyGameObject: {fileID: 7865125698230136530}
   playerVisual: {fileID: 1595046287741615824}
---- !u!114 &8975663328422813341
+--- !u!114 &7753152510260934434
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

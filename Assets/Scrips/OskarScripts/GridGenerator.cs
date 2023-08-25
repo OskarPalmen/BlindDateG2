@@ -40,8 +40,8 @@ public class GridGenerator : NetworkBehaviour
                         foreach (ulong clientId in NetworkManager.Singleton.ConnectedClientsIds)
                         {
                             //spawning in the player prefab
-                            GameObject playerTransform = Instantiate(enemyNpcPrefab);
-                            playerTransform.GetComponent<NetworkObject>().SpawnAsPlayerObject(clientId, true);
+                            enemyNpcPrefab = Instantiate(enemyNpcPrefab);
+                            enemyNpcPrefab.GetComponent<NetworkObject>().SpawnAsPlayerObject(clientId, true);
                         }
                     }
 
