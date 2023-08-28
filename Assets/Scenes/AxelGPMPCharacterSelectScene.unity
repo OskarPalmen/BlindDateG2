@@ -132,7 +132,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 21102409}
-  - component: {fileID: 21102412}
   - component: {fileID: 21102411}
   - component: {fileID: 21102410}
   m_Layer: 5
@@ -178,7 +177,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bodyPart: {fileID: 1833852205}
   options:
-  - {fileID: 0}
+  - {fileID: 21300000, guid: 5e05a03fde814994b8c609583895a6a1, type: 3}
   - {fileID: 21300000, guid: a4a59222f79399948ae2b128859ed9e0, type: 3}
   - {fileID: 21300000, guid: 7c99e3b86371d1c40aeeaad38ce15155, type: 3}
   - {fileID: 21300000, guid: 5fff9a7734ecb9a4186073406771947a, type: 3}
@@ -201,20 +200,6 @@ MonoBehaviour:
   bodyColor: {fileID: 1833852205}
   colors: []
   whatColor: 0
---- !u!114 &21102412
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 21102408}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f67e802cc455d9342841685bf34823ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bodyPart: {fileID: 0}
-  options: []
 --- !u!1 &46883388
 GameObject:
   m_ObjectHideFlags: 0
@@ -567,7 +552,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 107520700}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 21102410}
+        m_TargetAssemblyTypeName: OutfitChanger, Assembly-CSharp
+        m_MethodName: PreviousOption
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &107520700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1225,7 +1222,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 324409250}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 389972445}
+        m_TargetAssemblyTypeName: OutfitChanger, Assembly-CSharp
+        m_MethodName: NextOption
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &324409250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1394,7 +1403,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bodyPart: {fileID: 330477354}
   options:
-  - {fileID: 0}
+  - {fileID: 21300000, guid: 5e05a03fde814994b8c609583895a6a1, type: 3}
   - {fileID: 21300000, guid: 42077ada490a3de4a85207a435655885, type: 3}
   - {fileID: 21300000, guid: c0afae6fc3a687f408485f8321591d4a, type: 3}
   - {fileID: 21300000, guid: 4a235c28f25c0604b8432d0b2664b6f3, type: 3}
@@ -1516,7 +1525,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: fde5a8158c50c9c47abfd4e3f1cd63d4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5e05a03fde814994b8c609583895a6a1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2164,7 +2173,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 537108414}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 389972445}
+        m_TargetAssemblyTypeName: OutfitChanger, Assembly-CSharp
+        m_MethodName: PreviousOption
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &537108414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2256,7 +2277,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bodyPart: {fileID: 466465837}
   options:
-  - {fileID: 0}
+  - {fileID: 21300000, guid: 5e05a03fde814994b8c609583895a6a1, type: 3}
   - {fileID: 21300000, guid: fde5a8158c50c9c47abfd4e3f1cd63d4, type: 3}
   - {fileID: 21300000, guid: b1dc30ae957e1ee4b99cd13a1ff32f07, type: 3}
 --- !u!1 &565385100
@@ -2631,7 +2652,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 634847953}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2030622227}
+        m_TargetAssemblyTypeName: OutfitChanger, Assembly-CSharp
+        m_MethodName: PreviousOption
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &634847953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3804,7 +3837,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 995443628}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 138887789}
+        m_TargetAssemblyTypeName: OutfitChanger, Assembly-CSharp
+        m_MethodName: NextOption
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &995443628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4950,19 +4995,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1386478458}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: OutfitChanger, Assembly-CSharp
-        m_MethodName: NextOption
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1386478458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5121,7 +5154,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1561259542}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2030622227}
+        m_TargetAssemblyTypeName: OutfitChanger, Assembly-CSharp
+        m_MethodName: NextOption
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1561259542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5519,7 +5564,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1711004413}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 542807769}
+        m_TargetAssemblyTypeName: OutfitChanger, Assembly-CSharp
+        m_MethodName: NextOption
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1711004413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5911,7 +5968,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1759716676}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 21102410}
+        m_TargetAssemblyTypeName: OutfitChanger, Assembly-CSharp
+        m_MethodName: NextOption
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1759716676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6109,7 +6178,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1788108104}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 138887789}
+        m_TargetAssemblyTypeName: OutfitChanger, Assembly-CSharp
+        m_MethodName: PreviousOption
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1788108104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6463,7 +6544,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5fff9a7734ecb9a4186073406771947a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5e05a03fde814994b8c609583895a6a1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7067,7 +7148,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2111146102}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 542807769}
+        m_TargetAssemblyTypeName: OutfitChanger, Assembly-CSharp
+        m_MethodName: PreviousOption
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2111146102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7386,7 +7479,8 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6495480570872765014, guid: 946eb74596070e749a6fcf664f87de97, type: 3}
     m_RemovedGameObjects:
     - {fileID: 5874105059927871023, guid: 946eb74596070e749a6fcf664f87de97, type: 3}
     - {fileID: 6654501858548068027, guid: 946eb74596070e749a6fcf664f87de97, type: 3}
