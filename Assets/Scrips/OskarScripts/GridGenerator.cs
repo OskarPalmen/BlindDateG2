@@ -6,10 +6,8 @@ using UnityEngine;
 
 public class GridGenerator : NetworkBehaviour
 {
-    public static GridGenerator gridGenerator { get; private set; }
-    
     public GameObject npcPrefab;         // Prefab for the normal NPCs
-    public GameObject enemyNpcPrefab;    // Prefab for the enemy NPC
+    public GameObject enemyNpcPrefab;    // Default prefab for the enemy NPC
     public int rows = 3;                 // Number of rows in the grid
     public int columns = 3;              // Number of columns in the grid
 
@@ -18,10 +16,31 @@ public class GridGenerator : NetworkBehaviour
 
     public RectTransform panel; // Reference to the Panel component
 
+    private bool characterSelectPlayerReady = false;
+
     void Start()
     {
-        
+        StartCoroutine(WaitForCharacterSelectPlayer());
+    }
 
+    private IEnumerator WaitForCharacterSelectPlayer()
+    {
+        while (!characterSelectPlayerReady)
+        {
+            GameObject characterSelectPlayer = GameObject.FindGameObjectWithTag("PlayerCharacter");
+            if (characterSelectPlayer != null)
+            {
+                enemyNpcPrefab = characterSelectPlayer;
+                characterSelectPlayerReady = true;
+            }
+            yield return null;
+        }
+
+        GenerateGrid();
+    }
+
+    private void GenerateGrid()
+    {
         // Calculate the starting position based on the grid dimensions
         float startX = -(horizontalSpacing * (columns - 1)) / 2;
         float startY = -(verticalSpacing * (rows - 1)) / 2;
@@ -38,17 +57,16 @@ public class GridGenerator : NetworkBehaviour
                 // Check if this is the location for the enemy NPC
                 if (row == enemyRow && col == enemyColumn)
                 {
-
                     //prefabToSpawn = enemyNpcPrefab;
-                    if (IsHost && NetworkManager.Singleton.ConnectedClientsIds.Count >= 2)
+                    if (NetworkManager.Singleton.ConnectedClientsIds.Count >= 2)
                     {
-                        //prefabToSpawn = enemyNpcPrefab;
-
-
-                        //addcharatterServerRpc132();
-
+                        foreach (ulong clientId in NetworkManager.Singleton.ConnectedClientsIds)
+                        {
+                            //spawning in the player prefab
+                            enemyNpcPrefab = Instantiate(enemyNpcPrefab);
+                            enemyNpcPrefab.GetComponent<NetworkObject>().SpawnAsPlayerObject(clientId, true);
+                        }
                     }
-
 
                 }
 
@@ -65,23 +83,5 @@ public class GridGenerator : NetworkBehaviour
                 // newNPC.transform.SetParent(panel.transform);
             }
         }
-    }
-
-    //[ServerRpc(RequireOwnership = false)]
-    private void addcharatterServerRpc132()
-    {
-
-        foreach (ulong clientId in NetworkManager.Singleton.ConnectedClientsIds)
-        {
-            //spawning in the player prefab
-            //enemyNpcPrefab = Instantiate(enemyNpcPrefab);            
-            //enemyNpcPrefab.GetComponent<NetworkObject>().SpawnAsPlayerObject(clientId, true);
-            enemyNpcPrefab.GetComponent<NetworkObject>().SpawnAsPlayerObject(clientId, true);
-            //Instantiate(enemyNpcPrefab).GetComponent<NetworkObject>().SpawnAsPlayerObject(clientId, true);
-
-
-
-        }
-
     }
 }
