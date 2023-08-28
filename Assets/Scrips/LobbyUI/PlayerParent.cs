@@ -9,6 +9,8 @@ public class PlayerParent : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+
+        
     }
 
     private void OnDestroy()

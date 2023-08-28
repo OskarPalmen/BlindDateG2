@@ -14,6 +14,8 @@ public class TestingPlayer : NetworkBehaviour
     [SerializeField] private PlayerVisual playerVisual;
     [SerializeField] private List<Vector3> spawnPositionList;
 
+
+
     private void Start()
     {
         //PlayerData playerData = TestingGameManager.Instance.GetPlayerDataFromClientId(OwnerClientId);
@@ -25,6 +27,16 @@ public class TestingPlayer : NetworkBehaviour
             transform.SetParent(PlayerParent.Instance.transform, false);
         }
 
+    }
+
+    
+    [ClientRpc]
+    public void HidePlayersClientRpc()
+    {
+        if(IsLocalPlayer)
+        {
+            transform.GetChild(0).gameObject.SetActive(true);
+        }
     }
     private void OnDestroy()
     {

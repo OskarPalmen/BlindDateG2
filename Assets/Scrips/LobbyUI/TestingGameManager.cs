@@ -14,7 +14,7 @@ public class TestingGameManager : NetworkBehaviour
     //public event EventHandler OnLocalPlayerReadyChanged;
     public event EventHandler OnPlayerDataNetworkListChanged;
 
-    public RectTransform panel;
+    //public RectTransform panel;
 
 
 
@@ -86,14 +86,16 @@ public class TestingGameManager : NetworkBehaviour
             {
                 //spawning in the player prefab
 
-                NetworkObject playerTransform = Instantiate(playerPrefab, PlayerParent.Instance.transform);
-                playerTransform.SpawnAsPlayerObject(clientId, true);         
-                
-                
+                NetworkObject playerTransform = Instantiate(playerPrefab, new Vector3 (0,0 ,0) ,Quaternion.identity,PlayerParent.Instance.transform);
+                playerTransform.transform.localPosition = new Vector3(0, -300f, 0);
+                playerTransform.SpawnAsPlayerObject(clientId, true);
+                playerTransform.GetComponent<TestingPlayer>().HidePlayersClientRpc();
+
             }
         }
         
     }
+
 
     public bool IsPlayerIndexConnected(int playerIndex)
     {
