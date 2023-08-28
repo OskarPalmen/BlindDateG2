@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 public class TestingGameManager : NetworkBehaviour
 {
-    [SerializeField] private GameObject playerPrefab;
+    [SerializeField] private NetworkObject playerPrefab;
     public static TestingGameManager Instance { get; private set; }
 
     //public event EventHandler OnLocalPlayerReadyChanged;
@@ -86,8 +86,9 @@ public class TestingGameManager : NetworkBehaviour
             {
                 //spawning in the player prefab
 
-                GameObject playerTransform = Instantiate(playerPrefab);
-                playerTransform.GetComponent<NetworkObject>().SpawnAsPlayerObject(clientId, true);      
+                NetworkObject playerTransform = Instantiate(playerPrefab, PlayerParent.Instance.transform);
+                playerTransform.SpawnAsPlayerObject(clientId, true);         
+                
                 
             }
         }

@@ -19,7 +19,12 @@ public class TestingPlayer : NetworkBehaviour
         //PlayerData playerData = TestingGameManager.Instance.GetPlayerDataFromClientId(OwnerClientId);
         //playerVisual.SetPlayerColor(TestingGameManager.Instance.GetPlayerColor(playerData.colorId));
         Instances.Add(this);
-        
+
+        if (PlayerParent.Instance)
+        {
+            transform.SetParent(PlayerParent.Instance.transform, false);
+        }
+
     }
     private void OnDestroy()
     {

@@ -40,9 +40,9 @@ public class GridGenerator : NetworkBehaviour
                 {
 
                     //prefabToSpawn = enemyNpcPrefab;
-                    if (NetworkManager.Singleton.ConnectedClientsIds.Count >= 2)
+                    if (IsHost && NetworkManager.Singleton.ConnectedClientsIds.Count >= 2)
                     {
-                        prefabToSpawn = enemyNpcPrefab;
+                        //prefabToSpawn = enemyNpcPrefab;
 
 
                         //addcharatterServerRpc132();
