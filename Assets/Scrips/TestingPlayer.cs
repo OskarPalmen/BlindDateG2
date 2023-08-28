@@ -12,7 +12,7 @@ public class TestingPlayer : NetworkBehaviour
 
 
     [SerializeField] private PlayerVisual playerVisual;
-    [SerializeField] private List<Vector3> spawnPositionList;
+    //[SerializeField] private List<Vector3> spawnPositionList;
 
 
 
@@ -56,7 +56,7 @@ public class TestingPlayer : NetworkBehaviour
         //}
 
 
-        transform.position = spawnPositionList[TestingGameManager.Instance.GetPlayerDataIndexFromClientId(OwnerClientId)];
+        //transform.position = spawnPositionList[TestingGameManager.Instance.GetPlayerDataIndexFromClientId(OwnerClientId)];
 
         OnAnyPlayerSpawned?.Invoke(this, EventArgs.Empty);
 
