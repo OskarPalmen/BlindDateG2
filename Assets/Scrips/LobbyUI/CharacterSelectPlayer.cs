@@ -7,7 +7,7 @@ public class CharacterSelectPlayer : MonoBehaviour
     [SerializeField] int playerIndex;
     private void Start()
     {
-        TestingGameManager.Instance.OnPlayerDataNetworkListChanged += GameManager_OnPlayerDataNetworkListChanged;
+        //TestingGameManager.Instance.OnPlayerDataNetworkListChanged += GameManager_OnPlayerDataNetworkListChanged;
         CharacterSelectReady.Instance.OnReadyChanged += CharacterSelectReady_OnReadyChanged;
         UpdatePlayer();
     }
