@@ -57,7 +57,7 @@ public class TestingGameManager : NetworkBehaviour
     public void StartHost()
     {
         NetworkManager.Singleton.OnClientConnectedCallback += NetworkManager_OnClientConnectedCallback;
-        NetworkManager.Singleton.StartHost();
+        NetworkManager.Singleton.StartHost();        
     }
 
     private void NetworkManager_OnClientConnectedCallback(ulong clientId)
@@ -85,8 +85,10 @@ public class TestingGameManager : NetworkBehaviour
             foreach (ulong clientId in NetworkManager.Singleton.ConnectedClientsIds)
             {
                 //spawning in the player prefab
+
                 GameObject playerTransform = Instantiate(playerPrefab);
-                playerTransform.GetComponent<NetworkObject>().SpawnAsPlayerObject(clientId, true);
+                playerTransform.GetComponent<NetworkObject>().SpawnAsPlayerObject(clientId, true);      
+                
             }
         }
         

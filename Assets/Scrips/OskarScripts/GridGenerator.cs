@@ -20,6 +20,7 @@ public class GridGenerator : NetworkBehaviour
 
     void Start()
     {
+        
 
         // Calculate the starting position based on the grid dimensions
         float startX = -(horizontalSpacing * (columns - 1)) / 2;
@@ -37,13 +38,14 @@ public class GridGenerator : NetworkBehaviour
                 // Check if this is the location for the enemy NPC
                 if (row == enemyRow && col == enemyColumn)
                 {
-                    
 
                     //prefabToSpawn = enemyNpcPrefab;
                     if (NetworkManager.Singleton.ConnectedClientsIds.Count >= 2)
                     {
-                        //prefabToSpawn = enemyNpcPrefab;
-                        addcharatterServerRpc132();
+                        prefabToSpawn = enemyNpcPrefab;
+
+
+                        //addcharatterServerRpc132();
 
                     }
 

@@ -8,6 +8,7 @@ public class TestingPlayer : NetworkBehaviour
 {
     public static event EventHandler OnAnyPlayerSpawned;
     public static TestingPlayer LocalInstace {  get; private set; }
+    public static List<TestingPlayer> Instances = new List<TestingPlayer>();
 
 
     [SerializeField] private PlayerVisual playerVisual;
@@ -17,15 +18,25 @@ public class TestingPlayer : NetworkBehaviour
     {
         //PlayerData playerData = TestingGameManager.Instance.GetPlayerDataFromClientId(OwnerClientId);
         //playerVisual.SetPlayerColor(TestingGameManager.Instance.GetPlayerColor(playerData.colorId));
+        Instances.Add(this);
+        
+    }
+    private void OnDestroy()
+    {
+        Instances.Remove(this);
+    }
+    private void Update()
+    {
+        if(!IsOwner || !Application.isFocused) return;
     }
 
 
     public override void OnNetworkSpawn()
     {
-        if(IsOwner)
-        {
-            LocalInstace = this;
-        }
+        //if(IsOwner)
+        //{
+        //    LocalInstace = this;
+        //}
 
 
         transform.position = spawnPositionList[TestingGameManager.Instance.GetPlayerDataIndexFromClientId(OwnerClientId)];
