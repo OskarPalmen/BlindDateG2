@@ -7,7 +7,7 @@ using UnityEngine;
 public class GridGenerator : NetworkBehaviour
 {
     public GameObject npcPrefab;         // Prefab for the normal NPCs
-    public GameObject enemyNpcPrefab;    // Prefab for the enemy NPC
+    public GameObject enemyNpcPrefab;    // Default prefab for the enemy NPC
     public int rows = 3;                 // Number of rows in the grid
     public int columns = 3;              // Number of columns in the grid
 
@@ -16,7 +16,30 @@ public class GridGenerator : NetworkBehaviour
 
     public RectTransform panel; // Reference to the Panel component
 
+    private bool characterSelectPlayerReady = false;
+
     void Start()
+    {
+        StartCoroutine(WaitForCharacterSelectPlayer());
+    }
+
+    private IEnumerator WaitForCharacterSelectPlayer()
+    {
+        while (!characterSelectPlayerReady)
+        {
+            GameObject characterSelectPlayer = GameObject.FindGameObjectWithTag("PlayerCharacter");
+            if (characterSelectPlayer != null)
+            {
+                enemyNpcPrefab = characterSelectPlayer;
+                characterSelectPlayerReady = true;
+            }
+            yield return null;
+        }
+
+        GenerateGrid();
+    }
+
+    private void GenerateGrid()
     {
         // Calculate the starting position based on the grid dimensions
         float startX = -(horizontalSpacing * (columns - 1)) / 2;
