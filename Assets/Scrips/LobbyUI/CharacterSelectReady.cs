@@ -55,10 +55,10 @@ public class CharacterSelectReady : NetworkBehaviour
     [ClientRpc]
     private void SetplayerReadyClientRpc(ulong clientId)
     {
-        //if (IsLocalPlayer)
-        //{
-        //    transform.GetChild(0).gameObject.SetActive(true);
-        //}
+        if (IsLocalPlayer)
+        {
+            transform.GetChild(0).gameObject.SetActive(true);
+        }
 
 
         playerReadyDictionary[clientId] = true;

@@ -5,6 +5,7 @@ using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class TestingGameManager : NetworkBehaviour
 {
@@ -87,7 +88,7 @@ public class TestingGameManager : NetworkBehaviour
             {
                 //spawning in the player prefab
 
-                NetworkObject playerTransform = Instantiate(playerPrefab, new Vector3 (0,0 ,0) ,Quaternion.identity,PlayerParent.Instance.transform);
+                NetworkObject playerTransform = Instantiate(playerPrefab, new Vector3(0, 0, 0), Quaternion.identity, PlayerParent.Instance.transform);
                 playerTransform.transform.localPosition = new Vector3(0, -300f, 0);
                 playerTransform.SpawnAsPlayerObject(clientId, true);
                 playerTransform.GetComponent<TestingPlayer>().HidePlayersClientRpc();

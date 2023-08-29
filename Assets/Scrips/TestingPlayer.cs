@@ -24,7 +24,7 @@ public class TestingPlayer : NetworkBehaviour
 
         if (PlayerParent.Instance)
         {
-            transform.SetParent(PlayerParent.Instance.transform, false);
+            transform.SetParent(PlayerParent.Instance.transform, true);
         }
 
     }
@@ -37,7 +37,10 @@ public class TestingPlayer : NetworkBehaviour
         {
             transform.GetChild(0).gameObject.SetActive(true);
         }
+
+
     }
+
     private void OnDestroy()
     {
         Instances.Remove(this);
@@ -50,10 +53,10 @@ public class TestingPlayer : NetworkBehaviour
 
     public override void OnNetworkSpawn()
     {
-        //if(IsOwner)
-        //{
-        //    LocalInstace = this;
-        //}
+        if (IsOwner)
+        {
+            LocalInstace = this;
+        }
 
 
         //transform.position = spawnPositionList[TestingGameManager.Instance.GetPlayerDataIndexFromClientId(OwnerClientId)];
