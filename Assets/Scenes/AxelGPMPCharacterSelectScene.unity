@@ -8023,10 +8023,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 865111907}
     m_Modifications:
-    - target: {fileID: 1226388062090074851, guid: 946eb74596070e749a6fcf664f87de97, type: 3}
-      propertyPath: GlobalObjectIdHash
-      value: 1864916738
-      objectReference: {fileID: 0}
     - target: {fileID: 1697788493078153370, guid: 946eb74596070e749a6fcf664f87de97, type: 3}
       propertyPath: m_Name
       value: Player_1
@@ -8119,21 +8115,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3882488547575302049, guid: 946eb74596070e749a6fcf664f87de97, type: 3}
-      propertyPath: GlobalObjectIdHash
-      value: 1032006958
-      objectReference: {fileID: 0}
-    - target: {fileID: 6495480570872765014, guid: 946eb74596070e749a6fcf664f87de97, type: 3}
-      propertyPath: playerIndex
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7753152510260934434, guid: 946eb74596070e749a6fcf664f87de97, type: 3}
       propertyPath: GlobalObjectIdHash
       value: 272396044
-      objectReference: {fileID: 0}
-    - target: {fileID: 8975663328422813341, guid: 946eb74596070e749a6fcf664f87de97, type: 3}
-      propertyPath: GlobalObjectIdHash
-      value: 2948139286
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
