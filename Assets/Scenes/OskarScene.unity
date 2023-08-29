@@ -2148,7 +2148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03ebd91f38c0c544293b00eaf8b7ef65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npcPrefab: {fileID: 6254292313533660817, guid: 719083c3a5722a54190019f36fda7f34, type: 3}
+  npcPrefab: {fileID: 1697788493078153370, guid: 5f25509d04c072e49bde7e296f57a914, type: 3}
   enemyNpcPrefab: {fileID: 0}
   rows: 4
   columns: 5
