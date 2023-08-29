@@ -80,6 +80,8 @@ public class TestingGameManager : NetworkBehaviour
 
     private void SceneManager_OnLoadEventComplete(string sceneName, LoadSceneMode loadSceneMode, List<ulong> clientsCompleted, List<ulong> clientsTimedOut)
     {
+
+        GetComponent<TestingPlayer>().HidePlayersClientRpc();
         if (NetworkManager.Singleton.ConnectedClientsIds.Count >= 2)
         {
             foreach (ulong clientId in NetworkManager.Singleton.ConnectedClientsIds)

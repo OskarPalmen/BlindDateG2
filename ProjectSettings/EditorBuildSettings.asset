@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/AxelGPMPCharacterSelectScene1.unity
+    guid: d53e61bb8e694e542b996948c8e17096
   m_configObjects: {}

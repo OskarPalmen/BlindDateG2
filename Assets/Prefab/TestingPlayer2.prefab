@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2189590453894057377}
-  - component: {fileID: 6495480570872765014}
   - component: {fileID: 8975663328422813341}
   - component: {fileID: -8327818204324369826}
   - component: {fileID: -1678995247199497097}
@@ -41,21 +40,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1022, y: 575}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &6495480570872765014
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1697788493078153370}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26e753ef118c3e44eab6a7bc7541ad91, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerIndex: 0
-  readyGameObject: {fileID: 0}
-  playerVisual: {fileID: 0}
 --- !u!114 &8975663328422813341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87,7 +71,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 706ef5521c3c5f7479542579a6ea7291, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerVisual: {fileID: 7081496897095783392, guid: 0927c85ad744f6c4aa1179530ba0ba69, type: 3}
 --- !u!114 &-1678995247199497097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -229,6 +212,10 @@ PrefabInstance:
     - target: {fileID: 3171369883475713052, guid: 0927c85ad744f6c4aa1179530ba0ba69, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5066065773634795589, guid: 0927c85ad744f6c4aa1179530ba0ba69, type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 951099334
       objectReference: {fileID: 0}
     - target: {fileID: 6540438117357844400, guid: 0927c85ad744f6c4aa1179530ba0ba69, type: 3}
       propertyPath: m_IsActive

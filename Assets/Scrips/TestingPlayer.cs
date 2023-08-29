@@ -11,7 +11,7 @@ public class TestingPlayer : NetworkBehaviour
     public static List<TestingPlayer> Instances = new List<TestingPlayer>();
 
 
-    [SerializeField] private PlayerVisual playerVisual;
+    //[SerializeField] private PlayerVisual playerVisual;
     //[SerializeField] private List<Vector3> spawnPositionList;
 
 

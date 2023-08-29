@@ -12,7 +12,7 @@ public class TestingLobbyUI : MonoBehaviour
     [SerializeField] private Button backButton;
 
 
-    [SerializeField] private string characterSelectScene = "AxelGPMPCharacterSelectScene";
+    [SerializeField] private string characterSelectScene = "AxelGPMPCharacterSelectScene1";
 
 
 
@@ -22,7 +22,7 @@ public class TestingLobbyUI : MonoBehaviour
         {
             //NetworkManager.Singleton.StartHost();
             TestingGameManager.Instance.StartHost();
-            NetworkManager.Singleton.SceneManager.LoadScene(characterSelectScene, LoadSceneMode.Single);
+            NetworkManager.Singleton.SceneManager.LoadScene("AxelGPMPCharacterSelectScene", LoadSceneMode.Single);
         });
 
         joinGameButton.onClick.AddListener(() =>
