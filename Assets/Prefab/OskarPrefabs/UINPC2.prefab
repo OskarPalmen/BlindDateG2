@@ -221,7 +221,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5.8, y: 95.8}
+  m_AnchoredPosition: {x: 4.5, y: 95.8}
   m_SizeDelta: {x: 307, y: 208}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5982426077837082701
@@ -539,7 +539,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 046a7a00db6abf44aa0869ea8fe258e8, type: 3}
   - {fileID: 21300000, guid: 5e05a03fde814994b8c609583895a6a1, type: 3}
   playerPrefab: {fileID: 0}
-  customizationPartName: Hat
+  customizationPartName: Hat1
 --- !u!1 &3203740669540417897
 GameObject:
   m_ObjectHideFlags: 0
