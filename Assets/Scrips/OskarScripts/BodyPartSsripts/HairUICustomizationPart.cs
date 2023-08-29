@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class EyesUICustomizationPart : MonoBehaviour
+public class HairUICustomizationPart : MonoBehaviour
 {
     public Sprite[] customizationSprites; // Existing sprites
     public GameObject playerPrefab; // Reference to the player prefab

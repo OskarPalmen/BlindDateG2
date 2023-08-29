@@ -13,7 +13,7 @@ public class HatUICustomizationPart : MonoBehaviour
     private bool characterSelectPlayerReady = false;
     private void Awake()
     {
-        imageComponent = GetComponent<Image>();
+        imageComponent = GetComponentInChildren<Image>();
         //ApplyRandomCustomization();
     }
 

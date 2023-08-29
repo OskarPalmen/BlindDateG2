@@ -10,12 +10,35 @@ public class MouthUICustomizationPart : MonoBehaviour
     public string customizationPartName; // Name of the customization part (e.g., "Hat", "Eyes", "Mouth")
 
     private Image imageComponent;
-
+    private bool characterSelectPlayerReady = false;
     private void Awake()
     {
-        imageComponent = GetComponent<Image>();
+        imageComponent = GetComponentInChildren<Image>();
         //ApplyRandomCustomization();
     }
+
+    private void Start()
+    {
+        StartCoroutine(WaitForCharacterSelectPlayer());
+    }
+
+
+    private IEnumerator WaitForCharacterSelectPlayer()
+    {
+        while (!characterSelectPlayerReady)
+        {
+            GameObject characterSelectPlayer = GameObject.FindGameObjectWithTag("PlayerCharacter");
+            if (characterSelectPlayer != null)
+            {
+                playerPrefab = characterSelectPlayer;
+                characterSelectPlayerReady = true;
+            }
+            yield return null;
+        }
+
+        ApplyRandomCustomization();
+    }
+
 
     public void ApplyRandomCustomization()
     {
