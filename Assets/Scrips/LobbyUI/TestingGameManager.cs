@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Netcode;
+using UnityEditor.PackageManager;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -76,25 +77,49 @@ public class TestingGameManager : NetworkBehaviour
         if (IsServer)
         {
             NetworkManager.Singleton.SceneManager.OnLoadEventCompleted += SceneManager_OnLoadEventComplete;
+            NetworkManager.Singleton.OnClientConnectedCallback += SceneManager_OnClientConnect;
         }
     }
 
-    private void SceneManager_OnLoadEventComplete(string sceneName, LoadSceneMode loadSceneMode, List<ulong> clientsCompleted, List<ulong> clientsTimedOut)
+
+
+    private void SceneManager_OnClientConnect(ulong playerId)
     {
 
-        if (NetworkManager.Singleton.ConnectedClientsIds.Count >= 2)
+
         {
-            foreach (ulong clientId in NetworkManager.Singleton.ConnectedClientsIds)
-            {
-                //spawning in the player prefab
+            //spawning in the player prefab
 
-                NetworkObject playerTransform = Instantiate(playerPrefab, new Vector3(0, 0, 0), Quaternion.identity, PlayerParent.Instance.transform);
-                playerTransform.transform.localPosition = new Vector3(0, -300f, 0);
-                playerTransform.SpawnAsPlayerObject(clientId, true);
-                playerTransform.GetComponent<TestingPlayer>().HidePlayersClientRpc();
+            NetworkObject playerTransform = Instantiate(playerPrefab);
+            Debug.Log("weee" + playerId, playerTransform);
+            playerTransform.gameObject.name = playerId.ToString();
+            playerTransform.SpawnAsPlayerObject(playerId, false);
+            //playerTransform.GetComponent<TestingPlayer>().HidePlayersClientRpc();
+            //TestingPlayer.MoveCharaterToY(0);
 
-            }
         }
+
+    }
+
+
+    private void SceneManager_OnLoadEventComplete(string sceneName, LoadSceneMode loadSceneMode, List<ulong> clientsCompleted, List<ulong> clientsTimedOut)
+    {
+        //TestingPlayer.MoveCharaterToY(-100);
+        //if (NetworkManager.Singleton.ConnectedClientsIds.Count >= 2)
+        //{
+            
+        //    foreach (ulong clientId in NetworkManager.Singleton.ConnectedClientsIds)
+        //    {
+        //        //spawning in the player prefab
+        //        Debug.Log("weee" + clientId);
+
+        //        NetworkObject playerTransform = Instantiate(playerPrefab, new Vector3(0, 0, 0), Quaternion.identity, PlayerParent.Instance.transform);
+        //        playerTransform.transform.localPosition = new Vector3(0, -300f, 0);
+        //        playerTransform.SpawnAsPlayerObject(clientId, true);
+        //        playerTransform.GetComponent<TestingPlayer>().HidePlayersClientRpc();
+
+        //    }
+        //}
         
     }
 

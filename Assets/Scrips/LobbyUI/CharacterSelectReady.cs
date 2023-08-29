@@ -49,6 +49,7 @@ public class CharacterSelectReady : NetworkBehaviour
         if (allClientsReady)
         {
             NetworkManager.Singleton.SceneManager.LoadScene("OskarScene", LoadSceneMode.Single);
+            TestingPlayer.MoveCharaterToY(-300);
         }
     }
 

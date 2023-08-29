@@ -61,7 +61,7 @@ public class HatUICustomizationPart : MonoBehaviour
             int randomIndex = Random.Range(0, allSprites.Count);
             Sprite randomSprite = allSprites[randomIndex];
 
-            imageComponent.sprite = randomSprite;
+            if(imageComponent) imageComponent.sprite = randomSprite;
         }
     }
 }

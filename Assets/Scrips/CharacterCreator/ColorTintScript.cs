@@ -13,7 +13,7 @@ public class ColorTintScript : MonoBehaviour
 
     private void Awake ()
     {
-        bodyColor.GetComponent<Image>();
+        //bodyColor.GetComponent<Image>();
     }
 
     void Update ()

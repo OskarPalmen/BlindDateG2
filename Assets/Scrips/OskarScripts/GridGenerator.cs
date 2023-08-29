@@ -58,7 +58,7 @@ public class GridGenerator : NetworkBehaviour
                 if (row == enemyRow && col == enemyColumn)
                 {
                     //prefabToSpawn = enemyNpcPrefab;
-                    if (NetworkManager.Singleton.ConnectedClientsIds.Count >= 2)
+                    if (IsHost && NetworkManager.Singleton.ConnectedClientsIds.Count >= 2)
                     {
                         foreach (ulong clientId in NetworkManager.Singleton.ConnectedClientsIds)
                         {

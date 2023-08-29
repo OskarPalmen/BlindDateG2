@@ -15,7 +15,7 @@ public class OutfitChanger : MonoBehaviour
 
     private void Awake ()
     {
-        bodyPart.GetComponent<Image>();
+        //bodyPart.GetComponent<Image>();
     }
 
     public void NextOption()

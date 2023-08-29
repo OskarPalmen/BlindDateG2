@@ -25,25 +25,42 @@ public class TestingPlayer : NetworkBehaviour
 
         if (PlayerParent.Instance)
         {
-            transform.SetParent(PlayerParent.Instance.transform, true);
+            transform.SetParent(PlayerParent.Instance.transform, false);
+            //NetworkObject.SpawnAsPlayerObject(this.NetworkObjectId);
         }
-
+        //SpawnPlayerServerRpc(NetworkObjectId);
     }
+
+    //[ServerRpc(RequireOwnership = false)]
+    //public void SpawnPlayerServerRpc(ulong ownerId)
+    //{
+    //    NetworkObject.SpawnAsPlayerObject(ownerId);
+    //}
 
     
     [ClientRpc]
     public void HidePlayersClientRpc()
     {
-        if(IsLocalPlayer)
+        if(!IsLocalPlayer)
         {            
-            transform.GetChild(0).gameObject.SetActive(true);
+            transform.GetChild(0).gameObject.SetActive(false);
         }
 
 
     }
 
+    public static void MoveCharaterToY(float y)
+    {
+        foreach (var item in Instances)
+        {
+            item.transform.localPosition = new Vector3(0, y, 0);
+
+        }
+    }
+
     private void OnDestroy()
     {
+        Debug.Log("destroing "+OwnerClientId);
         Instances.Remove(this);
     }
     private void Update()
