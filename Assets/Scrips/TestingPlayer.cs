@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Netcode;
+using UnityEditor.PackageManager;
 using UnityEngine;
 
 public class TestingPlayer : NetworkBehaviour
@@ -34,7 +35,7 @@ public class TestingPlayer : NetworkBehaviour
     public void HidePlayersClientRpc()
     {
         if(IsLocalPlayer)
-        {
+        {            
             transform.GetChild(0).gameObject.SetActive(true);
         }
 
