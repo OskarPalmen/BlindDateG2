@@ -55,6 +55,12 @@ public class CharacterSelectReady : NetworkBehaviour
     [ClientRpc]
     private void SetplayerReadyClientRpc(ulong clientId)
     {
+        //if (IsLocalPlayer)
+        //{
+        //    transform.GetChild(0).gameObject.SetActive(true);
+        //}
+
+
         playerReadyDictionary[clientId] = true;
 
         OnReadyChanged?.Invoke(this, EventArgs.Empty);

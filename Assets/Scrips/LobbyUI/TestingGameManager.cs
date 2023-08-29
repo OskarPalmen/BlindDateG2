@@ -4,14 +4,17 @@ using System.Collections.Generic;
 using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class TestingGameManager : NetworkBehaviour
 {
-    [SerializeField] private GameObject playerPrefab;
+    [SerializeField] private NetworkObject playerPrefab;
     public static TestingGameManager Instance { get; private set; }
 
     //public event EventHandler OnLocalPlayerReadyChanged;
     public event EventHandler OnPlayerDataNetworkListChanged;
+
+    //public RectTransform panel;
 
 
 
@@ -19,7 +22,7 @@ public class TestingGameManager : NetworkBehaviour
     //[SerializeField] private List<Color> playerColorList;
 
     //private bool isLocalPlayerReady;
-    //private Dictionary<ulong, bool> playerReadyDictionary;
+    private Dictionary<ulong, bool> playerReadyDictionary;
     private NetworkList<PlayerData> playerDataNetworkList;
 
 
@@ -54,7 +57,7 @@ public class TestingGameManager : NetworkBehaviour
     public void StartHost()
     {
         NetworkManager.Singleton.OnClientConnectedCallback += NetworkManager_OnClientConnectedCallback;
-        NetworkManager.Singleton.StartHost();
+        NetworkManager.Singleton.StartHost();        
     }
 
     private void NetworkManager_OnClientConnectedCallback(ulong clientId)
@@ -77,17 +80,24 @@ public class TestingGameManager : NetworkBehaviour
 
     private void SceneManager_OnLoadEventComplete(string sceneName, LoadSceneMode loadSceneMode, List<ulong> clientsCompleted, List<ulong> clientsTimedOut)
     {
+
+        GetComponent<TestingPlayer>().HidePlayersClientRpc();
         if (NetworkManager.Singleton.ConnectedClientsIds.Count >= 2)
         {
             foreach (ulong clientId in NetworkManager.Singleton.ConnectedClientsIds)
             {
                 //spawning in the player prefab
-                GameObject playerTransform = Instantiate(playerPrefab);
-                playerTransform.GetComponent<NetworkObject>().SpawnAsPlayerObject(clientId, true);
+
+                NetworkObject playerTransform = Instantiate(playerPrefab, new Vector3 (0,0 ,0) ,Quaternion.identity,PlayerParent.Instance.transform);
+                playerTransform.transform.localPosition = new Vector3(0, -300f, 0);
+                playerTransform.SpawnAsPlayerObject(clientId, true);
+                playerTransform.GetComponent<TestingPlayer>().HidePlayersClientRpc();
+
             }
         }
         
     }
+
 
     public bool IsPlayerIndexConnected(int playerIndex)
     {
