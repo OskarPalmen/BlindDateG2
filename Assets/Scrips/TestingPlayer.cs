@@ -23,24 +23,10 @@ public class TestingPlayer : NetworkBehaviour
 
 
 
-
-    //[SerializeField] private PlayerVisual playerVisual;
-    //[SerializeField] private List<Vector3> spawnPositionList;
-
-
-    private void Awake()
-    {
-
-    }
-
-
     private void Start()
     {
-        //PlayerData playerData = TestingGameManager.Instance.GetPlayerDataFromClientId(OwnerClientId);
-        //playerVisual.SetPlayerColor(TestingGameManager.Instance.GetPlayerColor(playerData.colorId));
-       
+        //PlayerData playerData = TestingGameManager.Instance.GetPlayerDataFromClientId(OwnerClientId);    
  
-
         if (PlayerParent.Instance)
         {
             transform.SetParent(PlayerParent.Instance.transform, false);
@@ -48,17 +34,9 @@ public class TestingPlayer : NetworkBehaviour
             HidePlayersServerRpc();
 
             MoveCharaterToX(-385);
-            //NetworkObject.SpawnAsPlayerObject(this.NetworkObjectId);
         }
-
-        //SpawnPlayerServerRpc(NetworkObjectId);
     }
 
-    //[ServerRpc(RequireOwnership = false)]
-    //public void SpawnPlayerServerRpc(ulong ownerId)
-    //{
-    //    NetworkObject.SpawnAsPlayerObject(ownerId);
-    //}
 
 
     [ClientRpc]

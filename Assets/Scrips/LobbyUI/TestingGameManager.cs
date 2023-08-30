@@ -13,17 +13,10 @@ public class TestingGameManager : NetworkBehaviour
     [SerializeField] private NetworkObject playerPrefab;
     public static TestingGameManager Instance { get; private set; }
 
-    //public event EventHandler OnLocalPlayerReadyChanged;
     public event EventHandler OnPlayerDataNetworkListChanged;
 
-    //public RectTransform panel;
 
 
-
-    //change this to playercreator
-    //[SerializeField] private List<Color> playerColorList;
-
-    //private bool isLocalPlayerReady;
     private Dictionary<ulong, bool> playerReadyDictionary;
     private NetworkList<PlayerData> playerDataNetworkList;
 
@@ -43,19 +36,6 @@ public class TestingGameManager : NetworkBehaviour
         OnPlayerDataNetworkListChanged?.Invoke(this, EventArgs.Empty);
     }
 
-
-    //private void GameInput_OnInteractAction(object sender, EventArgs e)
-    //{
-    //    isLocalPlayerReady = true;
-    //    OnLocalPlayerReadyChanged?.Invoke(this, EventArgs.Empty);
-    //}
-
-
-    //public bool IsLocalPlayerReady()
-    //{
-    //    return isLocalPlayerReady;
-    //}
-
     public void StartHost()
     {
         NetworkManager.Singleton.OnClientConnectedCallback += NetworkManager_OnClientConnectedCallback;
@@ -67,7 +47,6 @@ public class TestingGameManager : NetworkBehaviour
         playerDataNetworkList.Add(new PlayerData
         {
             clientId = clientId,
-            //colorId = GetFirstUnusedColorId(),
         });
     }
        
@@ -158,60 +137,6 @@ public class TestingGameManager : NetworkBehaviour
     public PlayerData GetPlayerDataFromIndex(int playerIndex)
     {
         return playerDataNetworkList[playerIndex];
-    }
+    }    
 
-
-
-    
-    //change this to playercreator
-    //public Color GetPlayerColor(int colorId)
-    //{
-    //    return playerColorList[colorId];
-    //}
-    
-
-    //public void ChangePlayerColor(int colorId)
-    //{
-    //    ChangePlayerColorServerRpc(colorId);
-    //}
-
-    //[ServerRpc(RequireOwnership = false)]
-    //private void ChangePlayerColorServerRpc(int colorId, ServerRpcParams serverRpcParams = default)
-    //{
-    //    if(!IsColorAvailable(colorId))
-    //    {
-    //        return;
-    //    }
-    //    int playerDataindex = GetPlayerDataIndexFromClientId(serverRpcParams.Receive.SenderClientId);
-
-    //    ////grabbing
-    //    //PlayerData playerData = playerDataNetworkList[playerDataindex];
-    //    ////modifing
-    //    //playerData.colorId = colorId;
-    //    ////add it
-    //    //playerDataNetworkList[playerDataindex] = playerData;
-    //}
-
-    //private bool IsColorAvailable (int colorId)
-    //{
-    //    foreach (PlayerData playerData in playerDataNetworkList)
-    //    {
-    //        if (playerData.colorId == colorId)
-    //            return false;
-    //    }
-    //    return true;
-    //}
-
-    //private int GetFirstUnusedColorId()
-    //{
-    //    for(int i = 0; i < playerColorList.Count; i++)
-    //    {
-    //        if(IsColorAvailable(i))
-    //        {
-    //            return i;
-    //        }
-    //    }
-    //    //can add to see if player have same color/skins
-    //    return -1;
-    //}
 }
