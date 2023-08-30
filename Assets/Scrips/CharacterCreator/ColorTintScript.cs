@@ -49,8 +49,9 @@ public class ColorTintScript : MonoBehaviour
         //bodyColor.GetComponent<Image>();
     }
 
-    void Update ()
+    public void ColorChanger (int index)
     {
+        whatColor = index;
         for (int i = 0; i < colors.Count; i++)
         {
             if (i == whatColor)
@@ -60,11 +61,6 @@ public class ColorTintScript : MonoBehaviour
 
             }
         }
-    }
-
-    public void ColorChanger (int index)
-    {
-        whatColor = index;
     }
 
     public void ColorRandomize()

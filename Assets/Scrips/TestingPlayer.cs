@@ -9,7 +9,7 @@ using UnityEngine.UI;
 public class TestingPlayer : NetworkBehaviour
 {
     public static event EventHandler OnAnyPlayerSpawned;
-    public static TestingPlayer LocalInstace {  get; private set; }
+    public static TestingPlayer LocalInstace { get; private set; }
     public static List<TestingPlayer> Instances = new List<TestingPlayer>();
     public Image hair;
     public Image facialHair;
@@ -26,41 +26,21 @@ public class TestingPlayer : NetworkBehaviour
     private void Start()
     {
         //PlayerData playerData = TestingGameManager.Instance.GetPlayerDataFromClientId(OwnerClientId);    
- 
+        Instances.Add(this);
+        Debug.Log("Instecer " + Instances.Count);
+        if (this.IsOwner)
+        {
+            LocalInstace = this;
+        }
+
         if (PlayerParent.Instance)
         {
             transform.SetParent(PlayerParent.Instance.transform, false);
-            HidePlayersClientRpc();
-            HidePlayersServerRpc();
+
+
+            transform.GetChild(0).gameObject.SetActive(OwnerClientId == NetworkManager.Singleton.LocalClientId);
 
             MoveCharaterToX(-385);
-        }
-    }
-
-
-
-    [ClientRpc]
-    public void HidePlayersClientRpc()
-    {
-        if(OwnerClientId == 1 && IsClient)
-        {            
-            transform.GetChild(0).gameObject.SetActive(true);
-        }
-        if (OwnerClientId == 0 && IsOwnedByServer)
-        {
-            transform.GetChild(0).gameObject.SetActive(false);
-        }
-    }
-    [ServerRpc(RequireOwnership = false)]
-    public void HidePlayersServerRpc(ServerRpcParams serverRpcParams = default)
-    {
-        if (OwnerClientId == 0 && IsServer)
-        {
-            transform.GetChild(0).gameObject.SetActive(true);
-        }
-        if (OwnerClientId == 1 && IsClient)
-        {
-            transform.GetChild(0).gameObject.SetActive(false);
         }
     }
 
@@ -89,23 +69,18 @@ public class TestingPlayer : NetworkBehaviour
 
     private void OnDestroy()
     {
-        Debug.Log("destroing "+OwnerClientId);
+        Debug.Log("destroing " + OwnerClientId);
         Instances.Remove(this);
     }
     private void Update()
     {
-        if(!IsOwner || !Application.isFocused) return;
+        if (!IsOwner || !Application.isFocused) return;
     }
 
 
     public override void OnNetworkSpawn()
     {
 
-        Instances.Add(this);
-        if (this.IsOwner)
-        {
-            LocalInstace = this;
-        }
 
         //transform.position = spawnPositionList[TestingGameManager.Instance.GetPlayerDataIndexFromClientId(OwnerClientId)];
 
