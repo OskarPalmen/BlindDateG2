@@ -18,6 +18,8 @@ public class TestingPlayer : NetworkBehaviour
     public Image freckles;
     public Image hat;
     public Image accessories;
+    public Image skin;
+    public Image body;
 
 
 

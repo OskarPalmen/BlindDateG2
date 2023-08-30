@@ -78,6 +78,8 @@ MonoBehaviour:
   freckles: {fileID: 2283996101144094281}
   hat: {fileID: 7343144154709541216}
   accessories: {fileID: 4191147853360577286}
+  skin: {fileID: 6419823339464749014}
+  body: {fileID: 6455353281607669226}
 --- !u!114 &-1678995247199497097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -306,6 +308,28 @@ MonoBehaviour:
 --- !u!114 &4191147853360577286 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3972240453999727825, guid: 4db5694f3a6a66045837c5b945f21b6a, type: 3}
+  m_PrefabInstance: {fileID: 939503420021518295}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6419823339464749014 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6061284561087315969, guid: 4db5694f3a6a66045837c5b945f21b6a, type: 3}
+  m_PrefabInstance: {fileID: 939503420021518295}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6455353281607669226 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6097817796446861885, guid: 4db5694f3a6a66045837c5b945f21b6a, type: 3}
   m_PrefabInstance: {fileID: 939503420021518295}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}

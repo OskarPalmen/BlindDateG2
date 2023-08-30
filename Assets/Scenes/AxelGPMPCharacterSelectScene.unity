@@ -251,7 +251,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8822ce6b3bc56e140885104b4f54b0ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bodyColor: {fileID: 0}
   colors:
   - {r: 1, g: 1, b: 1, a: 0.99215686}
   - {r: 0.7843138, g: 0.6745098, b: 0.5058824, a: 0.99215686}
@@ -259,6 +258,7 @@ MonoBehaviour:
   - {r: 0.38431376, g: 0.24705884, b: 0.20392159, a: 0.99215686}
   - {r: 0.19607845, g: 0.16470589, b: 0.15686275, a: 0.99215686}
   whatColor: 0
+  Ctype: 0
 --- !u!1 &46883388
 GameObject:
   m_ObjectHideFlags: 0
@@ -2980,7 +2980,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8822ce6b3bc56e140885104b4f54b0ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bodyColor: {fileID: 0}
   colors:
   - {r: 1, g: 1, b: 1, a: 0.99215686}
   - {r: 0.7843138, g: 0.6745098, b: 0.5058824, a: 0.99215686}
@@ -2988,6 +2987,7 @@ MonoBehaviour:
   - {r: 0.38431376, g: 0.24705884, b: 0.20392159, a: 0.99215686}
   - {r: 0.19607845, g: 0.16470589, b: 0.15686275, a: 0.99215686}
   whatColor: 0
+  Ctype: 1
 --- !u!114 &658633601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3061,7 +3061,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8822ce6b3bc56e140885104b4f54b0ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bodyColor: {fileID: 0}
   colors:
   - {r: 1, g: 1, b: 1, a: 0.99215686}
   - {r: 0.7843138, g: 0.6745098, b: 0.5058824, a: 0.99215686}
@@ -3069,6 +3068,7 @@ MonoBehaviour:
   - {r: 0.38431376, g: 0.24705884, b: 0.20392159, a: 0.99215686}
   - {r: 0.19607845, g: 0.16470589, b: 0.15686275, a: 0.99215686}
   whatColor: 0
+  Ctype: 2
 --- !u!114 &723808074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9007,7 +9007,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8822ce6b3bc56e140885104b4f54b0ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bodyColor: {fileID: 0}
   colors:
   - {r: 1, g: 1, b: 1, a: 0.99215686}
   - {r: 0.7843138, g: 0.6745098, b: 0.5058824, a: 0.99215686}
@@ -9015,6 +9014,7 @@ MonoBehaviour:
   - {r: 0.38431376, g: 0.24705884, b: 0.20392159, a: 0.99215686}
   - {r: 0.19607845, g: 0.16470589, b: 0.15686275, a: 0.99215686}
   whatColor: 0
+  Ctype: 4
 --- !u!1 &2142780947
 GameObject:
   m_ObjectHideFlags: 0
