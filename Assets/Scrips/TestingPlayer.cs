@@ -26,6 +26,8 @@ public class TestingPlayer : NetworkBehaviour
         if (PlayerParent.Instance)
         {
             transform.SetParent(PlayerParent.Instance.transform, false);
+            HidePlayersClientRpc();
+            HidePlayersServerRpc();
             //NetworkObject.SpawnAsPlayerObject(this.NetworkObjectId);
         }
         //SpawnPlayerServerRpc(NetworkObjectId);
@@ -41,16 +43,31 @@ public class TestingPlayer : NetworkBehaviour
     [ClientRpc]
     public void HidePlayersClientRpc()
     {
-        if(!IsLocalPlayer)
+        if(OwnerClientId == 1 && IsClient)
         {            
+            transform.GetChild(0).gameObject.SetActive(true);
+        }
+        //if(!IsServer)
+        //{
+        //    transform.GetChild(0).gameObject.SetActive(false);
+        //}
+    }
+    [ServerRpc(RequireOwnership = false)]
+    public void HidePlayersServerRpc(ServerRpcParams serverRpcParams = default)
+    {
+        if (OwnerClientId == 0 && IsServer)
+        {
+            transform.GetChild(0).gameObject.SetActive(true);
+        }
+        if (OwnerClientId == 1 && IsClient)
+        {
             transform.GetChild(0).gameObject.SetActive(false);
         }
-
-
     }
 
     public static void MoveCharaterToY(float y)
     {
+        // moving player prefab to y position after charatercreator screen
         foreach (var item in Instances)
         {
             item.transform.localPosition = new Vector3(0, y, 0);
