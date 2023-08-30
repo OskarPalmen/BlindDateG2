@@ -1,31 +1,74 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Netcode;
+using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class OutfitChanger : MonoBehaviour
+public class OutfitChanger : NetworkBehaviour
 {
-    [Header("Image To Change")]
-    public Image bodyPart;
+
+    public enum BodyTypePart
+    {
+        Hair,
+        FacialHair,
+        Eyes,
+        Mouth,
+        Freckles,
+        Hat,
+        Accessories,
+
+    }
+    public BodyTypePart Btype;
+
+    //[Header("Image To Change")]
+    //public Image bodyPart;
     
     [Header("Sprites To Cycle Through")]
     public List<Sprite> options = new List<Sprite>();
 
     private int currentOption = 0;
 
-    private void Awake ()
+
+    public void SetSprite(Sprite sprite)
     {
-        //bodyPart.GetComponent<Image>();
+        switch (Btype)
+        {
+            case BodyTypePart.Hair:
+                TestingPlayer.LocalInstace.hair.sprite = sprite;
+                break;
+            case BodyTypePart.FacialHair:
+                TestingPlayer.LocalInstace.facialHair.sprite = sprite;
+                break;
+            case BodyTypePart.Eyes:
+                TestingPlayer.LocalInstace.eyes.sprite = sprite;
+                break;
+            case BodyTypePart.Mouth:
+                TestingPlayer.LocalInstace.mouth.sprite = sprite;
+                break;
+            case BodyTypePart.Freckles:
+                TestingPlayer.LocalInstace.freckles.sprite = sprite;
+                break;
+            case BodyTypePart.Hat:
+                TestingPlayer.LocalInstace.hat.sprite = sprite;
+                break;
+            case BodyTypePart.Accessories:
+                TestingPlayer.LocalInstace.accessories.sprite = sprite;
+                break;
+        }
     }
 
     public void NextOption()
     {
+       
+
         currentOption++;
         if(currentOption >= options.Count)
         {
             currentOption = 0; // Reset if cycled through the entire list
         }
-        bodyPart.sprite = options[currentOption];
+        SetSprite(options[currentOption]);
     }
 
     public void PreviousOption()
@@ -35,12 +78,12 @@ public class OutfitChanger : MonoBehaviour
         {
             currentOption = options.Count - 1; // Reset if cycled through the entire list
         }
-        bodyPart.sprite = options[currentOption];
+        SetSprite(options[currentOption]);
     }
 
     public void Randomize()
     {
         currentOption = Random.Range(0, options.Count - 1);
-        bodyPart.sprite = options[currentOption];
+        SetSprite(options[currentOption]);
     }
 }

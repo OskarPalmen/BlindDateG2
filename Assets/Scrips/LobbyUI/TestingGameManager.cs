@@ -88,12 +88,15 @@ public class TestingGameManager : NetworkBehaviour
         //spawning in the player prefab
 
         NetworkObject playerTransform = Instantiate(playerPrefab);
+        
         //Debug.Log("weee" + playerId, playerTransform);
         //playerTransform.gameObject.name = playerId.ToString();
         playerTransform.SpawnAsPlayerObject(playerId, false);
         //playerTransform.GetComponent<TestingPlayer>().HidePlayersClientRpc();
-        //TestingPlayer.MoveCharaterToY(0);
+        
     }
+
+
 
 
     private void SceneManager_OnLoadEventComplete(string sceneName, LoadSceneMode loadSceneMode, List<ulong> clientsCompleted, List<ulong> clientsTimedOut)

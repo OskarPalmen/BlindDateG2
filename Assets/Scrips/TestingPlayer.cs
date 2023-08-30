@@ -4,32 +4,51 @@ using System.Collections.Generic;
 using Unity.Netcode;
 using UnityEditor.PackageManager;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TestingPlayer : NetworkBehaviour
 {
     public static event EventHandler OnAnyPlayerSpawned;
     public static TestingPlayer LocalInstace {  get; private set; }
     public static List<TestingPlayer> Instances = new List<TestingPlayer>();
+    public Image hair;
+    public Image facialHair;
+    public Image eyes;
+    public Image mouth;
+    public Image freckles;
+    public Image hat;
+    public Image accessories;
+
+
 
 
     //[SerializeField] private PlayerVisual playerVisual;
     //[SerializeField] private List<Vector3> spawnPositionList;
 
 
+    private void Awake()
+    {
+
+    }
+
 
     private void Start()
     {
         //PlayerData playerData = TestingGameManager.Instance.GetPlayerDataFromClientId(OwnerClientId);
         //playerVisual.SetPlayerColor(TestingGameManager.Instance.GetPlayerColor(playerData.colorId));
-        Instances.Add(this);
+       
+ 
 
         if (PlayerParent.Instance)
         {
             transform.SetParent(PlayerParent.Instance.transform, false);
             HidePlayersClientRpc();
             HidePlayersServerRpc();
+
+            MoveCharaterToX(-385);
             //NetworkObject.SpawnAsPlayerObject(this.NetworkObjectId);
         }
+
         //SpawnPlayerServerRpc(NetworkObjectId);
     }
 
@@ -39,7 +58,7 @@ public class TestingPlayer : NetworkBehaviour
     //    NetworkObject.SpawnAsPlayerObject(ownerId);
     //}
 
-    
+
     [ClientRpc]
     public void HidePlayersClientRpc()
     {
@@ -71,6 +90,19 @@ public class TestingPlayer : NetworkBehaviour
         foreach (var item in Instances)
         {
             item.transform.localPosition = new Vector3(0, y, 0);
+            item.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+
+        }
+    }
+
+    public static void MoveCharaterToX(float x)
+    {
+        // moving player prefab to y position after charatercreator screen
+        foreach (var item in Instances)
+        {
+            item.transform.localPosition = new Vector3(x, 0, 0);
+            //item.transform.position = new Vector3(x, 0, 0);
+
 
         }
     }
@@ -88,11 +120,12 @@ public class TestingPlayer : NetworkBehaviour
 
     public override void OnNetworkSpawn()
     {
-        if (IsOwner)
+
+        Instances.Add(this);
+        if (this.IsOwner)
         {
             LocalInstace = this;
         }
-
 
         //transform.position = spawnPositionList[TestingGameManager.Instance.GetPlayerDataIndexFromClientId(OwnerClientId)];
 

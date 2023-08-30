@@ -22,7 +22,7 @@ public class ColorTintScript : MonoBehaviour
         {
             if (i == whatColor)
             {
-                bodyColor.color = colors[i];
+                //bodyColor.color = colors[i];
             }
         }
     }

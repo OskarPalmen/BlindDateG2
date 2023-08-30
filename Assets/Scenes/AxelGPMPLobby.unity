@@ -857,7 +857,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &1183118718
 MonoBehaviour:
@@ -1034,7 +1034,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37d301ee8c01d17409185d656f60f87b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefab: {fileID: 8975663328422813341, guid: 6d08a8ffe0a5c7e4495fa02f116a1221, type: 3}
+  playerPrefab: {fileID: 8975663328422813341, guid: 74889cd982637c842a6e1658c05ea0a4, type: 3}
 --- !u!4 &1328822579
 Transform:
   m_ObjectHideFlags: 0
