@@ -68,10 +68,10 @@ public class TestingPlayer : NetworkBehaviour
         {            
             transform.GetChild(0).gameObject.SetActive(true);
         }
-        //if(!IsServer)
-        //{
-        //    transform.GetChild(0).gameObject.SetActive(false);
-        //}
+        if (OwnerClientId == 0 && IsOwnedByServer)
+        {
+            transform.GetChild(0).gameObject.SetActive(false);
+        }
     }
     [ServerRpc(RequireOwnership = false)]
     public void HidePlayersServerRpc(ServerRpcParams serverRpcParams = default)
