@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Netcode;
@@ -10,6 +11,7 @@ public class TestingPlayer : NetworkBehaviour
 {
     public static event EventHandler OnAnyPlayerSpawned;
     public static TestingPlayer LocalInstace { get; private set; }
+    public static TestingPlayer RemoteInstace { get; private set; }
     public static List<TestingPlayer> Instances = new List<TestingPlayer>();
     public Image hair;
     public Image facialHair;
@@ -21,6 +23,7 @@ public class TestingPlayer : NetworkBehaviour
     public Image skin;
     public Image body;
 
+    public GenericUICustomizationPart[] partSetters;
 
 
     private void Start()
@@ -31,6 +34,10 @@ public class TestingPlayer : NetworkBehaviour
         if (this.IsOwner)
         {
             LocalInstace = this;
+        }
+        else
+        {
+            RemoteInstace = this;
         }
 
         if (PlayerParent.Instance)
@@ -80,11 +87,17 @@ public class TestingPlayer : NetworkBehaviour
 
     public override void OnNetworkSpawn()
     {
-
-
+        SharePlayersVisualesClientRpc(partSetters.Select(p => p.LastIndex).ToArray());
         //transform.position = spawnPositionList[TestingGameManager.Instance.GetPlayerDataIndexFromClientId(OwnerClientId)];
 
         OnAnyPlayerSpawned?.Invoke(this, EventArgs.Empty);
+    }
 
+    [ClientRpc]
+    private void SharePlayersVisualesClientRpc(int[] partIndices)
+    {
+        for (int i = 0; i < partIndices.Length; i++) {
+            partSetters[i].SetCustomization(partIndices[i]);
+        }
     }
 }

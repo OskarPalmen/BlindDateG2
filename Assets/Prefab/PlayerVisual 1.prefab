@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3127837259930453095}
+  - component: {fileID: 4379238618498543414}
   m_Layer: 5
   m_Name: Freckles
   m_TagString: Untagged
@@ -37,6 +38,24 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &4379238618498543414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 248633352839109224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7557b3049416db439728f5aba15a2eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  customizationSprites:
+  - {fileID: 21300000, guid: fde5a8158c50c9c47abfd4e3f1cd63d4, type: 3}
+  - {fileID: 21300000, guid: 5e05a03fde814994b8c609583895a6a1, type: 3}
+  playerPrefab: {fileID: 0}
+  customizationPartName: Freckles1
+  RandomizeOnStart: 0
 --- !u!1 &804360500227832083
 GameObject:
   m_ObjectHideFlags: 0
@@ -46,6 +65,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1807692099912192288}
+  - component: {fileID: 3662466889319599707}
   m_Layer: 5
   m_Name: Mouth
   m_TagString: Untagged
@@ -74,6 +94,32 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &3662466889319599707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 804360500227832083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7557b3049416db439728f5aba15a2eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  customizationSprites:
+  - {fileID: 21300000, guid: 9f2bed05359031f4c9ea2b143648619e, type: 3}
+  - {fileID: 21300000, guid: 492eab58a4065e5478b6727f7b39b946, type: 3}
+  - {fileID: 21300000, guid: 8112a5401c240164fbd7843ad00b0381, type: 3}
+  - {fileID: 21300000, guid: ed3d843e39a291c4c8cd07737f711a9c, type: 3}
+  - {fileID: 21300000, guid: f0b6b5ad0e0497a40b7e04bfe26f86a3, type: 3}
+  - {fileID: 21300000, guid: 22509ab1298a6ef408c3c839fbef6289, type: 3}
+  - {fileID: 21300000, guid: 0eff5ea59b8300f46b2f5e0c6dc58039, type: 3}
+  - {fileID: 21300000, guid: cd8cbfc419d470343b49871f629effa4, type: 3}
+  - {fileID: 21300000, guid: 6a476942de324fc4a83690d63fce5945, type: 3}
+  - {fileID: 21300000, guid: 04ef8f65289cdcb4696db6b8e85bc45d, type: 3}
+  playerPrefab: {fileID: 0}
+  customizationPartName: Mouth1
+  RandomizeOnStart: 0
 --- !u!1 &2067112736551647354
 GameObject:
   m_ObjectHideFlags: 0
@@ -83,6 +129,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4556970688384941576}
+  - component: {fileID: 5103938777148150270}
   m_Layer: 5
   m_Name: Hair
   m_TagString: Untagged
@@ -111,6 +158,26 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &5103938777148150270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067112736551647354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7557b3049416db439728f5aba15a2eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  customizationSprites:
+  - {fileID: 21300000, guid: 42077ada490a3de4a85207a435655885, type: 3}
+  - {fileID: 21300000, guid: 4a235c28f25c0604b8432d0b2664b6f3, type: 3}
+  - {fileID: 21300000, guid: a2769db375733814aaf29d17bbd0da24, type: 3}
+  - {fileID: 21300000, guid: c0afae6fc3a687f408485f8321591d4a, type: 3}
+  playerPrefab: {fileID: 0}
+  customizationPartName: Hair1
+  RandomizeOnStart: 0
 --- !u!1 &2276343541894190480
 GameObject:
   m_ObjectHideFlags: 0
@@ -272,6 +339,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 195405890771456479}
+  - component: {fileID: 7212170409880634168}
   m_Layer: 5
   m_Name: Face
   m_TagString: Untagged
@@ -300,6 +368,23 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &7212170409880634168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3006181830759059249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7557b3049416db439728f5aba15a2eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  customizationSprites:
+  - {fileID: 21300000, guid: bba35da763336f04d924fc276be3a072, type: 3}
+  playerPrefab: {fileID: 0}
+  customizationPartName: Face1
+  RandomizeOnStart: 0
 --- !u!1 &4283339314801451825
 GameObject:
   m_ObjectHideFlags: 0
@@ -385,6 +470,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7453265994987002072}
+  - component: {fileID: 7716463804443090731}
   m_Layer: 5
   m_Name: FacialHair
   m_TagString: Untagged
@@ -413,6 +499,30 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &7716463804443090731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5001830837503756399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7557b3049416db439728f5aba15a2eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  customizationSprites:
+  - {fileID: 21300000, guid: a4a59222f79399948ae2b128859ed9e0, type: 3}
+  - {fileID: 21300000, guid: 7c99e3b86371d1c40aeeaad38ce15155, type: 3}
+  - {fileID: 21300000, guid: 5fff9a7734ecb9a4186073406771947a, type: 3}
+  - {fileID: 21300000, guid: b1dc30ae957e1ee4b99cd13a1ff32f07, type: 3}
+  - {fileID: 21300000, guid: e4d3d0112b1836b49b77b45ef7d98767, type: 3}
+  - {fileID: 21300000, guid: 726b0b235edeb5946b7cfd1eb3fbc25c, type: 3}
+  - {fileID: 21300000, guid: 0fccccfde58c36741b0a33cf830d7747, type: 3}
+  - {fileID: 21300000, guid: 296d4a012a791034b8b7de32db4e81cf, type: 3}
+  playerPrefab: {fileID: 0}
+  customizationPartName: FacialHair1
+  RandomizeOnStart: 0
 --- !u!1 &5152525759467449918
 GameObject:
   m_ObjectHideFlags: 0
@@ -568,6 +678,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4540749208869710423}
+  - component: {fileID: 5756167480125715929}
   m_Layer: 5
   m_Name: Hat
   m_TagString: Untagged
@@ -596,6 +707,25 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &5756167480125715929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6010746794841021716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7557b3049416db439728f5aba15a2eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  customizationSprites:
+  - {fileID: 21300000, guid: 61e96763f4dfabd4c84181df55667146, type: 3}
+  - {fileID: 21300000, guid: 046a7a00db6abf44aa0869ea8fe258e8, type: 3}
+  - {fileID: 21300000, guid: 5e05a03fde814994b8c609583895a6a1, type: 3}
+  playerPrefab: {fileID: 0}
+  customizationPartName: Hat1
+  RandomizeOnStart: 0
 --- !u!1 &6934113524630797456
 GameObject:
   m_ObjectHideFlags: 0
@@ -950,6 +1080,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7770074047321583778}
+  - component: {fileID: 111462918754250007}
   m_Layer: 5
   m_Name: Eyes
   m_TagString: Untagged
@@ -978,6 +1109,28 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &111462918754250007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7154600519240888040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7557b3049416db439728f5aba15a2eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  customizationSprites:
+  - {fileID: 21300000, guid: 71c69bdda6314d9449e8ad3f2c5cb73c, type: 3}
+  - {fileID: 21300000, guid: e233437e6440dc844bd767e94200ada3, type: 3}
+  - {fileID: 21300000, guid: 9b41974738bf67646aba390153f5feb8, type: 3}
+  - {fileID: 21300000, guid: f08840e7c00026447a46969d2e851865, type: 3}
+  - {fileID: 21300000, guid: 0ee5f2101320add41a65654096a990a7, type: 3}
+  - {fileID: 21300000, guid: 25d0e03d5b7b92a4981969aec4f2fa29, type: 3}
+  playerPrefab: {fileID: 0}
+  customizationPartName: Eyes1
+  RandomizeOnStart: 0
 --- !u!1 &7830083058018494311
 GameObject:
   m_ObjectHideFlags: 0
@@ -1063,6 +1216,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7246215100984772070}
+  - component: {fileID: 4848950310924148545}
   m_Layer: 5
   m_Name: Body
   m_TagString: Untagged
@@ -1091,6 +1245,23 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &4848950310924148545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8138223225330214801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7557b3049416db439728f5aba15a2eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  customizationSprites:
+  - {fileID: 21300000, guid: 1ad6d227b1927194194250ac4b3bda2a, type: 3}
+  playerPrefab: {fileID: 0}
+  customizationPartName: Body1
+  RandomizeOnStart: 0
 --- !u!1 &8283804680124679447
 GameObject:
   m_ObjectHideFlags: 0
@@ -1252,6 +1423,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5935409836731269005}
+  - component: {fileID: 8995102853664847223}
   m_Layer: 5
   m_Name: Accessories
   m_TagString: Untagged
@@ -1280,6 +1452,28 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &8995102853664847223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8788481558427892278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7557b3049416db439728f5aba15a2eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  customizationSprites:
+  - {fileID: 21300000, guid: 5e05a03fde814994b8c609583895a6a1, type: 3}
+  - {fileID: 21300000, guid: c1d5edd536cbf2e4fbad6b9db62f1f5f, type: 3}
+  - {fileID: 21300000, guid: f732c44c61dabf5459928019a1ef4c3f, type: 3}
+  - {fileID: 21300000, guid: 808802b376c02b14ca46a41b02f2951b, type: 3}
+  - {fileID: 21300000, guid: 9e721087cce61164eb52455e8f6ca300, type: 3}
+  - {fileID: 21300000, guid: 36a2c8201c467a84a8328d5d58934d03, type: 3}
+  playerPrefab: {fileID: 0}
+  customizationPartName: Accessories1
+  RandomizeOnStart: 0
 --- !u!1 &8851825828591222133
 GameObject:
   m_ObjectHideFlags: 0
