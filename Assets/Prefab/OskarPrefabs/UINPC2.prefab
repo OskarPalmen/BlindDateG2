@@ -344,7 +344,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &513211496154308101
 RectTransform:
   m_ObjectHideFlags: 0
@@ -580,7 +580,7 @@ MonoBehaviour:
   customizationSprites:
   - {fileID: 21300000, guid: bba35da763336f04d924fc276be3a072, type: 3}
   playerPrefab: {fileID: 0}
-  customizationPartName: Face
+  customizationPartName: Face1
 --- !u!1 &3639505694746651391
 GameObject:
   m_ObjectHideFlags: 0
@@ -713,7 +713,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: a2769db375733814aaf29d17bbd0da24, type: 3}
   - {fileID: 21300000, guid: c0afae6fc3a687f408485f8321591d4a, type: 3}
   playerPrefab: {fileID: 0}
-  customizationPartName: Hair
+  customizationPartName: Hair1
 --- !u!1 &5911812538965318571
 GameObject:
   m_ObjectHideFlags: 0
@@ -843,7 +843,7 @@ MonoBehaviour:
   customizationSprites:
   - {fileID: 21300000, guid: 1ad6d227b1927194194250ac4b3bda2a, type: 3}
   playerPrefab: {fileID: 0}
-  customizationPartName: Body
+  customizationPartName: Body1
 --- !u!1 &6916193647922857716
 GameObject:
   m_ObjectHideFlags: 0
@@ -1050,7 +1050,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: fde5a8158c50c9c47abfd4e3f1cd63d4, type: 3}
   - {fileID: 21300000, guid: 5e05a03fde814994b8c609583895a6a1, type: 3}
   playerPrefab: {fileID: 0}
-  customizationPartName: Freckles
+  customizationPartName: Freckles1
 --- !u!1 &8420125675669283518
 GameObject:
   m_ObjectHideFlags: 0
@@ -1109,7 +1109,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0ee5f2101320add41a65654096a990a7, type: 3}
   - {fileID: 21300000, guid: 25d0e03d5b7b92a4981969aec4f2fa29, type: 3}
   playerPrefab: {fileID: 0}
-  customizationPartName: Eyes
+  customizationPartName: Eyes1
 --- !u!1 &8512437115054137372
 GameObject:
   m_ObjectHideFlags: 0
@@ -1246,7 +1246,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0fccccfde58c36741b0a33cf830d7747, type: 3}
   - {fileID: 21300000, guid: 296d4a012a791034b8b7de32db4e81cf, type: 3}
   playerPrefab: {fileID: 0}
-  customizationPartName: FacialHair
+  customizationPartName: FacialHair1
 --- !u!1 &9104734780344312485
 GameObject:
   m_ObjectHideFlags: 0
@@ -1309,7 +1309,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 6a476942de324fc4a83690d63fce5945, type: 3}
   - {fileID: 21300000, guid: 04ef8f65289cdcb4696db6b8e85bc45d, type: 3}
   playerPrefab: {fileID: 0}
-  customizationPartName: Mouth
+  customizationPartName: Mouth1
 --- !u!1 &9130220716647865863
 GameObject:
   m_ObjectHideFlags: 0
@@ -1329,7 +1329,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &6896939898374521504
 RectTransform:
   m_ObjectHideFlags: 0

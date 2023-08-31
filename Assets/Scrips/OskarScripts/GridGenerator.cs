@@ -38,22 +38,22 @@ public class GridGenerator : NetworkBehaviour
 
             //GameObject characterSelectPlayer = gameObject.SetActive(OwnerClientId == NetworkManager.Singleton.LocalClientId);
 
-            if (OwnerClientId == 0)
-            {
-                enemyNpcPrefab = characterSelectPlayer;
-                characterSelectPlayerReady = true;
-            }
-            if (OwnerClientId == 1)
-            {
-                enemyNpcPrefab = characterSelectPlayer;
-                characterSelectPlayerReady = true;
-            }
-
-            //if (characterSelectPlayer != null)
+            //if (OwnerClientId == 0)
             //{
             //    enemyNpcPrefab = characterSelectPlayer;
             //    characterSelectPlayerReady = true;
             //}
+            //if (OwnerClientId == 1)
+            //{
+            //    enemyNpcPrefab = characterSelectPlayer;
+            //    characterSelectPlayerReady = true;
+            //}
+
+            if (characterSelectPlayer != null)
+            {
+                enemyNpcPrefab = characterSelectPlayer;
+                characterSelectPlayerReady = true;
+            }
             yield return null;
         }
 
@@ -79,8 +79,8 @@ public class GridGenerator : NetworkBehaviour
                 // Check if this is the location for the enemy NPC
                 if (row == enemyRow && col == enemyColumn)
                 {
-                    //prefabToSpawn = enemyNpcPrefab;
-                    //enemyNpcPrefab = Instantiate(enemyNpcPrefab);
+                    prefabToSpawn = enemyNpcPrefab;
+                    enemyNpcPrefab = Instantiate(enemyNpcPrefab);
                     //foreach (var item in TestingPlayer.Instances)
                     //{
 
