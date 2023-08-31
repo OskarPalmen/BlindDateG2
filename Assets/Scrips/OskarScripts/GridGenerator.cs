@@ -8,6 +8,7 @@ public class GridGenerator : NetworkBehaviour
 {
     public GameObject npcPrefab;         // Prefab for the normal NPCs
     public GameObject enemyNpcPrefab;    // Default prefab for the enemy NPC
+    //public NetworkObject enemyNpcPrefab;    // Default prefab for the enemy NPC
     public int rows = 3;                 // Number of rows in the grid
     public int columns = 3;              // Number of columns in the grid
 
@@ -27,17 +28,38 @@ public class GridGenerator : NetworkBehaviour
     {
         while (!characterSelectPlayerReady)
         {
+
             GameObject characterSelectPlayer = GameObject.FindGameObjectWithTag("PlayerCharacter");
-            if (characterSelectPlayer != null)
+            //NetworkObject characterSelectPlayer = (OwnerClientId == NetworkManager.Singleton.LocalClientId);
+
+            //NetworkObject characterSelectPlayer = NetworkObject.FindObjectOfType<NetworkObject>(OwnerClientId == NetworkManager.Singleton.LocalClientId);
+            //NetworkObject characterSelectPlayer = NetworkObject
+
+
+            //GameObject characterSelectPlayer = gameObject.SetActive(OwnerClientId == NetworkManager.Singleton.LocalClientId);
+
+            if (OwnerClientId == 0)
             {
                 enemyNpcPrefab = characterSelectPlayer;
                 characterSelectPlayerReady = true;
             }
+            if (OwnerClientId == 1)
+            {
+                enemyNpcPrefab = characterSelectPlayer;
+                characterSelectPlayerReady = true;
+            }
+
+            //if (characterSelectPlayer != null)
+            //{
+            //    enemyNpcPrefab = characterSelectPlayer;
+            //    characterSelectPlayerReady = true;
+            //}
             yield return null;
         }
 
         GenerateGrid();
     }
+
 
     private void GenerateGrid()
     {
@@ -58,22 +80,20 @@ public class GridGenerator : NetworkBehaviour
                 if (row == enemyRow && col == enemyColumn)
                 {
                     //prefabToSpawn = enemyNpcPrefab;
-                    if (IsHost && NetworkManager.Singleton.ConnectedClientsIds.Count >= 2)
-                    {
-                        foreach (ulong clientId in NetworkManager.Singleton.ConnectedClientsIds)
-                        {
-                            //spawning in the player prefab
-                            //enemyNpcPrefab = Instantiate(enemyNpcPrefab);
-                            //enemyNpcPrefab.GetComponent<NetworkObject>().SpawnAsPlayerObject(clientId, true);
-                        }
-                    }
+                    //enemyNpcPrefab = Instantiate(enemyNpcPrefab);
+                    //foreach (var item in TestingPlayer.Instances)
+                    //{
 
+                    //    //TestingPlayer.Instances = Instantiate(prefabToSpawn, panelPosition, Quaternion.identity);
+                    //    //item.transform.localPosition = new Vector3(0, 0, 0);
+                    //    //item.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+                    //}
                 }
 
                 // Calculate the position for the new NPC in panel space
                 Vector3 panelPosition = new Vector3(startX + col * horizontalSpacing, startY + row * verticalSpacing, 0);
 
-                // Instantiate the NPC prefab at the calculated position
+                //Instantiate the NPC prefab at the calculated position
                 GameObject newNPC = Instantiate(prefabToSpawn, panelPosition, Quaternion.identity);
 
                 // Set the Panel as the parent of the newly instantiated NPC
@@ -84,4 +104,14 @@ public class GridGenerator : NetworkBehaviour
             }
         }
     }
+
+    //public void MoveCharater()
+    //{
+    //    // moving player prefab to y position after charatercreator screen
+    //    foreach (var item in TestingPlayer.Instances)
+    //    {
+    //        item.transform.localPosition = new Vector3(0, 0, 0);
+    //        item.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+    //    }
+    //}
 }

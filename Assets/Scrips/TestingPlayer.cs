@@ -27,7 +27,7 @@ public class TestingPlayer : NetworkBehaviour
     {
         //PlayerData playerData = TestingGameManager.Instance.GetPlayerDataFromClientId(OwnerClientId);    
         Instances.Add(this);
-        Debug.Log("Instecer " + Instances.Count);
+
         if (this.IsOwner)
         {
             LocalInstace = this;
