@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HatUICustomizationPart : MonoBehaviour
+public class BodyUICustomizationPart : MonoBehaviour
 {
     public Sprite[] customizationSprites; // Existing sprites
     public GameObject playerPrefab; // Reference to the player prefab
@@ -13,7 +13,7 @@ public class HatUICustomizationPart : MonoBehaviour
     private bool characterSelectPlayerReady = false;
     private void Awake()
     {
-        imageComponent = GetComponent<Image>();
+        imageComponent = GetComponentInChildren<Image>();
         //ApplyRandomCustomization();
     }
 
@@ -61,9 +61,7 @@ public class HatUICustomizationPart : MonoBehaviour
             int randomIndex = Random.Range(0, allSprites.Count);
             Sprite randomSprite = allSprites[randomIndex];
 
-            if(imageComponent) imageComponent.sprite = randomSprite;
+            imageComponent.sprite = randomSprite;
         }
     }
 }
-
-
