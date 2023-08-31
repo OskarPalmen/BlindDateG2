@@ -788,7 +788,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d04799e4cfe38449f757124829be85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionText: have a big black beard?
+  questionText: HAVE A BIG BLACK BEARD?
 --- !u!114 &28781969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1147,7 +1147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d04799e4cfe38449f757124829be85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionText: have a big auburn mustache?
+  questionText: HAVE A BIG AUBURN MUSTACHE?
 --- !u!114 &53682432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1981,7 +1981,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d04799e4cfe38449f757124829be85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionText: have a big brown mustache?
+  questionText: HAVE A BIG BROWN MUSTACHE?
 --- !u!114 &115344123
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3071,7 +3071,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d04799e4cfe38449f757124829be85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionText: have a big blond mustache?
+  questionText: HAVE A BIG BLOND MUSTACHE?
 --- !u!114 &175129985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3354,7 +3354,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d04799e4cfe38449f757124829be85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionText: have sunglasses?
+  questionText: HAVE SUNGLASSES?
 --- !u!114 &188680343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3502,7 +3502,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d04799e4cfe38449f757124829be85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionText: have curly long beige hair?
+  questionText: HAVE CURLY LONG BEIGE HAIR?
 --- !u!114 &207604001
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3919,7 +3919,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d04799e4cfe38449f757124829be85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionText: have straight short brown hair?
+  questionText: HAVE STRAIGHT SHORT BROWN HAIR?
 --- !u!114 &225378145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4151,7 +4151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d04799e4cfe38449f757124829be85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionText: have short curly black hair?
+  questionText: HAVE SHORT CURLY BLACK HAIR?
 --- !u!114 &242085668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4434,7 +4434,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d04799e4cfe38449f757124829be85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionText: have a big brown beard?
+  questionText: HAVE A BIG BROWN BEARD?
 --- !u!114 &253199932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4987,7 +4987,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d04799e4cfe38449f757124829be85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionText: have a small beige mustache?
+  questionText: HAVE A SMALL BEIGE MUSTACHE?
 --- !u!114 &273091473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5789,7 +5789,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.1366272, y: -23.845001}
+  m_AnchoredPosition: {x: -0.1366272, y: -23.845}
   m_SizeDelta: {x: 361.3706, y: 114.81}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &311602043
@@ -5883,7 +5883,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d04799e4cfe38449f757124829be85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionText: have short curly beige hair?
+  questionText: HAVE SHORT CURLY BEIGE HAIR?
 --- !u!114 &312963099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6853,8 +6853,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.1366, y: -23.845}
-  m_SizeDelta: {x: 361.3706, y: 114.81}
+  m_AnchoredPosition: {x: -0.1366, y: -24.145}
+  m_SizeDelta: {x: 361.3706, y: 117.51}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &354329772
 MonoBehaviour:
@@ -7581,7 +7581,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d04799e4cfe38449f757124829be85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionText: shows no teeth
+  questionText: SHOWS NO TEETH?
 --- !u!1 &434011683
 GameObject:
   m_ObjectHideFlags: 0
@@ -8129,7 +8129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d04799e4cfe38449f757124829be85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionText: have a big black beard?
+  questionText: HAVE A BIG BLACK BEARD?
 --- !u!114 &488133394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8412,7 +8412,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d04799e4cfe38449f757124829be85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionText: have yellow eyes?
+  questionText: HAVE YELLOW EYES?
 --- !u!114 &512195324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8843,7 +8843,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d04799e4cfe38449f757124829be85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionText: have short curly brown hair?
+  questionText: HAVE SHORT CURLY BROWN HAIR?
 --- !u!114 &538874327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9075,7 +9075,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d04799e4cfe38449f757124829be85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionText: have straight short blond hair?
+  questionText: HAVE STRAIGHT SHORT BLOND HAIR?
 --- !u!114 &551141389
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9661,7 +9661,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d04799e4cfe38449f757124829be85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionText: have a flower hat?
+  questionText: HAVE A FLOWER HAT?
 --- !u!114 &584630526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10079,7 +10079,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d04799e4cfe38449f757124829be85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionText: have hazel eyes?
+  questionText: HAVE HAZEL EYES?
 --- !u!114 &616596106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10227,7 +10227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d04799e4cfe38449f757124829be85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionText: have a blond goat beard?
+  questionText: HAVE A BLOND GOAT BEARD?
 --- !u!114 &620611508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10375,7 +10375,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d04799e4cfe38449f757124829be85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionText: have a big black mustache?
+  questionText: HAVE A BIG BLACK MUSTACHE?
 --- !u!114 &633941992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10671,7 +10671,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d04799e4cfe38449f757124829be85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionText: have straight short black hair?
+  questionText: HAVE STRAIGHT SHORT BLACK HAIR?
 --- !u!114 &646407576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11838,7 +11838,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d04799e4cfe38449f757124829be85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionText: have blue eyes?
+  questionText: HAVE BLUE EYES?
 --- !u!114 &679720998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13327,7 +13327,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 64}
+  m_AnchoredPosition: {x: 0, y: 80}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &757530652
@@ -13614,7 +13614,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d04799e4cfe38449f757124829be85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionText: have dark brown eyes?
+  questionText: HAVE DARK BROWN EYES?
 --- !u!114 &778072444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13972,7 +13972,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d04799e4cfe38449f757124829be85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionText: have a black goat beard?
+  questionText: HAVE A BLACK GOAT BEARD?
 --- !u!114 &791243561
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14200,7 +14200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d04799e4cfe38449f757124829be85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionText: have a big beige mustache?
+  questionText: HAVE A BIG BEIGE MUSTACHE?
 --- !u!114 &801165087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14617,7 +14617,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d04799e4cfe38449f757124829be85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionText: have curly long blond hair?
+  questionText: HAVE CURLY LONG BLOND HAIR?
 --- !u!114 &826000503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15170,7 +15170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d04799e4cfe38449f757124829be85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionText: have no hair
+  questionText: HAVE NO HAIR?
 --- !u!114 &837735716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16786,7 +16786,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d04799e4cfe38449f757124829be85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionText: have short curly auburn hair?
+  questionText: HAVE SHORT CURLY AUBURN HAIR?
 --- !u!114 &938742493
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16934,7 +16934,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d04799e4cfe38449f757124829be85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionText: have straight short beige hair?
+  questionText: HAVE STRAIGHT SHORT BEIGE HAIR?
 --- !u!114 &943366633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18370,7 +18370,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d04799e4cfe38449f757124829be85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionText: have a small blond mustache?
+  questionText: HAVE A SMALL BLOND MUSTACHE?
 --- !u!114 &1057541240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18882,7 +18882,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d04799e4cfe38449f757124829be85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionText: have dark lipstick?
+  questionText: HAVE DARK LIPSTICK?
 --- !u!114 &1115663208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21136,7 +21136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d04799e4cfe38449f757124829be85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionText: have headphones?
+  questionText: HAVE HEADPHONES?
 --- !u!1 &1274008427
 GameObject:
   m_ObjectHideFlags: 0
@@ -21689,7 +21689,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d04799e4cfe38449f757124829be85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionText: have glasses?
+  questionText: HAVE GLASSES?
 --- !u!1 &1299410175
 GameObject:
   m_ObjectHideFlags: 0
@@ -22888,7 +22888,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d04799e4cfe38449f757124829be85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionText: have a small brown mustache?
+  questionText: HAVE A SMALL BROWN MUSTACHE?
 --- !u!114 &1373045733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24155,7 +24155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d04799e4cfe38449f757124829be85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionText: have a big blond beard?
+  questionText: HAVE A BIG BLOND BEARD?
 --- !u!114 &1440560730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24935,7 +24935,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d04799e4cfe38449f757124829be85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionText: have starglasses?
+  questionText: HAVE STARGLASSES?
 --- !u!1 &1465286748
 GameObject:
   m_ObjectHideFlags: 0
@@ -26988,7 +26988,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d04799e4cfe38449f757124829be85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionText: have a beige goat beard?
+  questionText: HAVE A BEIGE GOAT BEARD?
 --- !u!114 &1557629105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27722,7 +27722,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d04799e4cfe38449f757124829be85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionText: have short curly blond hair?
+  questionText: HAVE SHORT CURLY BLOND HAIR?
 --- !u!1 &1586944244
 GameObject:
   m_ObjectHideFlags: 0
@@ -28179,7 +28179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d04799e4cfe38449f757124829be85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionText: have light lipstick?
+  questionText: HAVE LIGHT LIPSTICK?
 --- !u!114 &1615980374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28950,7 +28950,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d04799e4cfe38449f757124829be85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionText: have a big beige beard?
+  questionText: HAVE A BIG BEIGE BEARD?
 --- !u!114 &1685599209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30075,7 +30075,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d04799e4cfe38449f757124829be85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionText: have turqouise eyes?
+  questionText: HAVE TURQOUISE EYES?
 --- !u!114 &1714993142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30358,7 +30358,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d04799e4cfe38449f757124829be85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionText: have a small auburn mustache?
+  questionText: HAVE A SMALL AUBURN MUSTACHE?
 --- !u!114 &1716536088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31261,7 +31261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d04799e4cfe38449f757124829be85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionText: have a auburn goat beard?
+  questionText: HAVE A AUBURN GOAT BEARD?
 --- !u!114 &1737195692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31544,7 +31544,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d04799e4cfe38449f757124829be85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionText: have red eyes?
+  questionText: HAVE RED EYES?
 --- !u!114 &1745258269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31997,7 +31997,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d04799e4cfe38449f757124829be85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionText: frown?
+  questionText: FROWN?
 --- !u!1 &1786995274
 GameObject:
   m_ObjectHideFlags: 0
@@ -32895,7 +32895,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d04799e4cfe38449f757124829be85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionText: smile?
+  questionText: SMILE?
 --- !u!1 &1819820892
 GameObject:
   m_ObjectHideFlags: 0
@@ -33295,7 +33295,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d04799e4cfe38449f757124829be85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionText: have curly long auburn hair?
+  questionText: HAVE CURLY LONG AUBURN HAIR?
 --- !u!114 &1845159807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33661,7 +33661,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d04799e4cfe38449f757124829be85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionText: have curly long brown hair?
+  questionText: HAVE CURLY LONG BROWN HAIR?
 --- !u!114 &1869851368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34349,7 +34349,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d04799e4cfe38449f757124829be85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionText: have curly long black hair?
+  questionText: HAVE CURLY LONG BLACK HAIR?
 --- !u!114 &1911162412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34632,7 +34632,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d04799e4cfe38449f757124829be85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionText: have a cap?
+  questionText: HAVE A CAP?
 --- !u!114 &1926048900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36308,7 +36308,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d04799e4cfe38449f757124829be85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionText: have eyelashes?
+  questionText: HAVE EYELASHES?
 --- !u!1 &2025428948
 GameObject:
   m_ObjectHideFlags: 0
@@ -36456,7 +36456,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d04799e4cfe38449f757124829be85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionText: have earrings?
+  questionText: HAVE EARRINGS?
 --- !u!1 &2027660183
 GameObject:
   m_ObjectHideFlags: 0
@@ -36720,7 +36720,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d04799e4cfe38449f757124829be85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionText: shows teeth?
+  questionText: SHOWS TEETH?
 --- !u!114 &2049901866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37097,7 +37097,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d04799e4cfe38449f757124829be85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionText: have freckles?
+  questionText: HAVE FRECKLES?
 --- !u!1 &2060900599
 GameObject:
   m_ObjectHideFlags: 0
@@ -37151,7 +37151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d04799e4cfe38449f757124829be85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionText: have straight short auburn hair?
+  questionText: HAVE STRAIGHT SHORT AUBURN HAIR?
 --- !u!114 &2060900602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37767,7 +37767,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d04799e4cfe38449f757124829be85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionText: have a brown goat beard?
+  questionText: HAVE A BROWN GOAT BEARD?
 --- !u!114 &2128545126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38032,7 +38032,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -9}
+  m_AnchoredPosition: {x: 0, y: 4}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2143543906
@@ -38185,7 +38185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d04799e4cfe38449f757124829be85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionText: have a big auburn beard?
+  questionText: HAVE A BIG AUBURN BEARD?
 --- !u!114 &2146119268
 MonoBehaviour:
   m_ObjectHideFlags: 0
